@@ -1,11 +1,18 @@
 import React from "react";
+import Image from "next/image";
 
 const Desc = () => {
   return (
     <div className="h-1/6 flex text-slate-100 backdrop-blur-sm">
       {/* place */}
       <div className=" basis-1/3 flex items-center justify-center px-4 xl:basis-1/4">
-        <img src="/location.png" alt="" className="w-6 mr-2 lg:w-8 lg:mr-3" />
+        <Image
+          src="/location.png"
+          alt="img"
+          width={20}
+          height={20}
+          className="w-6 mr-2 lg:w-8 lg:mr-3"
+        />
         <h1 className="xs:text-xl sm:text-2xl lg:text-3xl font-bold">
           Sri Lanka
         </h1>
