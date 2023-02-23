@@ -8,7 +8,7 @@ const Nav = () => {
     setToggle(!toggle);
   };
   return (
-    <div className="flex order-3 sm:px-5 lg:px-0 lg:order-2">
+    <div className="flex order-3 px-5 lg:px-0 lg:order-2">
       <button
         className="flex flex-col px-5 lg:hidden py-[9px] rounded-full hover:bg-slate-400  hover:bg-opacity-30"
         onClick={handleClick}

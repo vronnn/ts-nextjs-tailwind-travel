@@ -6,7 +6,7 @@ const Scroller = () => {
     setActive(value);
   };
   return (
-    <div className="flex justify-between items-center py-6 md:py-16 lg:py-6 lg:container h-1/6">
+    <div className="flex justify-between items-center py-4 md:py-16 lg:py-6 lg:container h-1/6">
       <button className="px-4 py-2 rounded-full border shadow-md hover:shadow-sm hover:bg-slate-300">
         Back<span className="hidden xs:inline"> Page</span>
       </button>
