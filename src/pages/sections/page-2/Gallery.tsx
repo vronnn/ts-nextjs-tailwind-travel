@@ -16,7 +16,7 @@ const Gallery = () => {
         </div>
         <div className="py-2">
           <h2 className="text-lg font-bold">Castlewellan Forest, Ireland</h2>
-          <p>
+          <p className="text-sm">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id
             nesciunt saepe iusto.
           </p>
@@ -34,7 +34,7 @@ const Gallery = () => {
         </div>
         <div className="py-2">
           <h2 className="text-lg font-bold">Snow Lake, Swiss</h2>
-          <p>
+          <p className="text-sm">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id
             nesciunt saepe iusto.
           </p>
@@ -52,7 +52,7 @@ const Gallery = () => {
         </div>
         <div className="py-2">
           <h2 className="text-lg font-bold">Life Bridge, Ecuador</h2>
-          <p>
+          <p className="text-sm">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id
             nesciunt saepe iusto.
           </p>
@@ -70,7 +70,7 @@ const Gallery = () => {
         </div>
         <div className="py-2">
           <h2 className="text-lg font-bold">Luang Prabang, Laos</h2>
-          <p>
+          <p className="text-sm">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id
             nesciunt saepe iusto.
           </p>
