@@ -69,12 +69,12 @@ export default function Home() {
                   Complete Package Tour
                 </h2>
                 <h3 className="text-md lg:text-lg text-emerald-900 mb-2">
-                  The most satisfying service tour you'll ever try
+                  The most satisfying service tour you&lsquo;ll ever try
                 </h3>
                 <p className="text-sm sm:text-base">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
                   sint harum fugiat, odit sunt veritatis aspernatur voluptatibus
-                  in soluta nesciunt ut veniam omnis, quia{" "}
+                  in soluta nesciunt ut veniam omnis, quia
                   <span className="hidden lg:inline">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Esse saepe accusamus fugit laudantium error ipsa veritatis
@@ -127,7 +127,7 @@ export default function Home() {
                   Pacify and Content Journey
                 </h2>
                 <h3 className="text-md lg:text-lg text-emerald-900 mb-2">
-                  The most satisfying service tour you'll ever try
+                  The most satisfying service tour you&lsquo;ll ever try
                 </h3>
                 <p className="text-sm sm:text-base">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
