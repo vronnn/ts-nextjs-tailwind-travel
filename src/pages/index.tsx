@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <div className="scroll-smooth">
         <main
-          className={`min-h-screen bg-[url('/forest-dark.jpg')] bg-cover bg-no-repeat`}
+          className={`min-h-screen bg-[url('/forest-dark.jpg')] bg-cover bg-no-repeat mb-4`}
         >
           {/* header */}
           <Header />
@@ -33,10 +33,7 @@ export default function Home() {
           <Footer />
         </main>
         {/* section 2 */}
-        <section
-          id="destinations"
-          className="min-h-screen bg-slate-100 px-4 text-slate-700"
-        >
+        <section id="destinations" className="min-h-screen px-4 text-slate-700">
           {/* container */}
           <div className="lg:container flex flex-col">
             {/* Title */}
