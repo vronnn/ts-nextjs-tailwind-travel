@@ -13,12 +13,14 @@ module.exports = {
       "2xs": "200px",
       xs: "350px",
       s: "500px",
+
       sm: "640px",
       // => @media (min-width: 640px) { ... }
 
       md: "768px",
       // => @media (min-width: 768px) { ... }
 
+      lmd: "880px",
       lg: "1024px",
       // => @media (min-width: 1024px) { ... }
 

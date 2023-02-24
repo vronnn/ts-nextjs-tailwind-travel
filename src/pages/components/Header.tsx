@@ -1,5 +1,6 @@
 import React, { UIEvent } from "react";
 import Nav from "./Nav";
+import Image from "next/image";
 
 const Header = () => {
   const handleUIEvent = (e: UIEvent<HTMLDivElement>) => {};
@@ -12,10 +13,18 @@ const Header = () => {
       >
         <div className="flex items-center justify-between relative min-h-[5.2rem]">
           {/* Logo */}
-          <div className="px-5 lg:px-10 lg:mr-6 xl:px-0 xl:pr-16 order-1">
+          <div className="flex items-center px-5 lg:px-10 lg:mr-6 xl:px-0 order-1">
+            <a href="">
+              <Image
+                src={"/white-logo.png"}
+                width={65}
+                height={20}
+                alt=""
+              ></Image>
+            </a>
             <a
               href=""
-              className="text-slate-100 text-lg sm:text-xl lg:text-2xl font-bold tracking-wide"
+              className="hidden lg:inline text-slate-100 text-lg sm:text-xl lg:text-2xl font-bold tracking-wide"
             >
               Travel
             </a>

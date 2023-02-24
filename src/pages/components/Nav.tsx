@@ -18,7 +18,7 @@ const Nav = () => {
         <span className="w-1 h-1 bg-slate-100 my-[2px] rounded-full"></span>
       </button>
 
-      {toggle ? null : <NavVer />}
+      {!toggle ? <NavVer /> : null}
 
       <NavHor />
     </div>

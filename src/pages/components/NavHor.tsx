@@ -21,24 +21,35 @@ const NavVer = () => {
         </li>
         <li className="group">
           <a
-            href="#custom-travel-planning"
+            href="#destinations"
             className={`px-2 lg:mx-4 xl:mx-5 2xl:mx-6 group-hover:font-semibold ${
-              active === "ctp" ? "text-slate-100 font-semibold" : ""
+              active === "destinations" ? "text-slate-100 font-semibold" : ""
             }`}
-            onClick={() => updateActiveLink("ctp")}
+            onClick={() => updateActiveLink("destinations")}
           >
-            Custom travel planning
+            Destinations
           </a>
         </li>
         <li className="group">
           <a
-            href="#destinations"
+            href="#about"
             className={`px-2 lg:mx-4 xl:mx-5 2xl:mx-6 group-hover:font-semibold ${
-              active === "dest" ? "text-slate-100 font-semibold" : ""
+              active === "about" ? "text-slate-100 font-semibold" : ""
             }`}
-            onClick={() => updateActiveLink("dest")}
+            onClick={() => updateActiveLink("about")}
           >
-            Destinations
+            About
+          </a>
+        </li>
+        <li className="group">
+          <a
+            href="#review"
+            className={`px-2 lg:mx-4 xl:mx-5 2xl:mx-6 group-hover:font-semibold ${
+              active === "review" ? "text-slate-100 font-semibold" : ""
+            }`}
+            onClick={() => updateActiveLink("review")}
+          >
+            Review
           </a>
         </li>
         <li className="group">

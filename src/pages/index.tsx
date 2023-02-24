@@ -8,6 +8,7 @@ import Title from "./sections/page-2/Title";
 import Search from "./sections/page-2/Search";
 import Scroller from "./sections/page-2/Scroller";
 import Gallery from "./sections/page-2/Gallery";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,6 +48,131 @@ export default function Home() {
             {/* scroller */}
             <Scroller />
           </div>
+        </section>
+        {/* section 3 */}
+        <section id="about" className="bg-slate-100 px-5 text-slate-700 ">
+          {/* About-1 */}
+          <div className="min-h-screen py-10 lg:container">
+            {/* add */}
+            <div className="lmd:flex lmd:flex-wrap mt-8 space-y-4 lmd:space-y-0">
+              <div className="border-slate-500 lmd:w-5/12 lmd:mr-8">
+                <Image
+                  src="/4.jpg"
+                  alt=""
+                  width={800}
+                  height={20}
+                  className=""
+                />
+              </div>
+              <div className="lmd:w-5/12">
+                <h2 className="text-2xl sm:text-3xl font-bold lg:text-4xl mb-2">
+                  Complete Package Tour
+                </h2>
+                <h3 className="text-md lg:text-lg text-emerald-900 mb-2">
+                  The most satisfying service tour you'll ever try
+                </h3>
+                <p className="text-sm sm:text-base">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  sint harum fugiat, odit sunt veritatis aspernatur voluptatibus
+                  in soluta nesciunt ut veniam omnis, quia{" "}
+                  <span className="hidden lg:inline">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse saepe accusamus fugit laudantium error ipsa veritatis
+                    soluta cum commodi nihil.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div className="lmd:flex lmd:flex-wrap lmd:justify-end mt-20 space-y-4 lmd:space-y-0">
+              <div className="border-slate-500 lmd:w-5/12 lmd:order-2">
+                <Image
+                  src="/3.jpg"
+                  alt=""
+                  width={800}
+                  height={20}
+                  className=""
+                />
+              </div>
+              <div className="lmd:w-5/12 lmd:order-1 lmd:mr-8">
+                <h2 className="text-2xl sm:text-3xl font-bold lg:text-4xl mb-2">
+                  Safe and Convinient Trip
+                </h2>
+                <h3 className="text-md lg:text-lg text-emerald-900 mb-2">
+                  Led by our trained and experienced tour guide
+                </h3>
+                <p className="text-sm sm:text-base">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  sint harum fugiat, odit sunt veritatis aspernatur voluptatibus
+                  in soluta nesciunt ut veniam omnis, quia{" "}
+                  <span className="hidden lg:inline">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse saepe accusamus fugit laudantium error ipsa veritatis
+                    soluta cum commodi nihil.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div className="lmd:flex lmd:flex-wrap mt-20 space-y-4 lmd:space-y-0">
+              <div className="border-slate-500 lmd:w-5/12 lmd:mr-8">
+                <Image
+                  src="/5.jpg"
+                  alt=""
+                  width={800}
+                  height={20}
+                  className=""
+                />
+              </div>
+              <div className="lmd:w-5/12">
+                <h2 className="text-2xl sm:text-3xl font-bold lg:text-4xl mb-2">
+                  Pacify and Content Journey
+                </h2>
+                <h3 className="text-md lg:text-lg text-emerald-900 mb-2">
+                  The most satisfying service tour you'll ever try
+                </h3>
+                <p className="text-sm sm:text-base">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  sint harum fugiat, odit sunt veritatis aspernatur voluptatibus
+                  in soluta nesciunt ut veniam omnis, quia{" "}
+                  <span className="hidden lg:inline">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse saepe accusamus fugit laudantium error ipsa veritatis
+                    soluta cum commodi nihil.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div className="lmd:flex lmd:flex-wrap lmd:justify-end mt-20 space-y-4 lmd:space-y-0">
+              <div className="border-slate-500 lmd:w-5/12 lmd:order-2">
+                <Image
+                  src="/6.jpg"
+                  alt=""
+                  width={800}
+                  height={20}
+                  className=" brightness-110"
+                />
+              </div>
+              <div className="lmd:w-5/12 lmd:order-1 lmd:mr-8">
+                <h2 className="text-2xl sm:text-3xl font-bold lg:text-4xl mb-2">
+                  Nice and Comfy Lodging
+                </h2>
+                <h3 className="text-md lg:text-lg text-emerald-900 mb-2">
+                  Led by our trained and experienced tour guide
+                </h3>
+                <p className="text-sm sm:text-base">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  sint harum fugiat, odit sunt veritatis aspernatur voluptatibus
+                  in soluta nesciunt ut veniam omnis, quia{" "}
+                  <span className="hidden lg:inline">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse saepe accusamus fugit laudantium error ipsa veritatis
+                    soluta cum commodi nihil.
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* About-2 */}
+          <div></div>
         </section>
       </div>
     </>
