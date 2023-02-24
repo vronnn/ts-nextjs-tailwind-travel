@@ -15,7 +15,10 @@ const Gallery = () => {
             className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-300"
           />
           <div className="hidden group-hover:absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-10 group-hover:flex flex-col items-center justify-center transition-all duration-500">
-            <a href="" className="text-slate-100 text-center text-2xl mb-4">
+            <a
+              href=""
+              className="text-slate-100 text-center text-2xl mb-4 font-semibold"
+            >
               Explore now
             </a>
             <HiArrowLongDown
@@ -43,7 +46,10 @@ const Gallery = () => {
             className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-300"
           />
           <div className="hidden group-hover:absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-10 group-hover:flex flex-col items-center justify-center transition-all duration-500">
-            <a href="" className="text-slate-100 text-center text-2xl mb-4">
+            <a
+              href=""
+              className="text-slate-100 text-center text-2xl mb-4 font-semibold"
+            >
               Explore now
             </a>
             <HiArrowLongDown
@@ -71,7 +77,10 @@ const Gallery = () => {
             className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-300"
           />
           <div className="hidden group-hover:absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-10 group-hover:flex flex-col items-center justify-center transition-all duration-500">
-            <a href="" className="text-slate-100 text-center text-2xl mb-4">
+            <a
+              href=""
+              className="text-slate-100 text-center text-2xl mb-4 font-semibold"
+            >
               Explore now
             </a>
             <HiArrowLongDown
@@ -99,7 +108,10 @@ const Gallery = () => {
             className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-300"
           />
           <div className="hidden group-hover:absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-10 group-hover:flex flex-col items-center justify-center transition-all duration-500">
-            <a href="" className="text-slate-100 text-center text-2xl mb-4">
+            <a
+              href=""
+              className="text-slate-100 text-center text-2xl mb-4 font-semibold"
+            >
               Explore now
             </a>
             <HiArrowLongDown

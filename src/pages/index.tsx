@@ -8,7 +8,10 @@ import Title from "./sections/page-2/Title";
 import Search from "./sections/page-2/Search";
 import Scroller from "./sections/page-2/Scroller";
 import Gallery from "./sections/page-2/Gallery";
+import About from "./sections/page-3/About";
+import ReviewCard from "./components/ReviewCard";
 import Image from "next/image";
+import { AiFillStar } from "react-icons/ai";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,129 +51,339 @@ export default function Home() {
         </section>
         {/* section 3 */}
         <section id="about" className="bg-slate-100 px-5 text-slate-700 ">
-          {/* About-1 */}
-          <div className="min-h-screen py-10 lg:container">
-            {/* add */}
-            <div className="lmd:flex lmd:flex-wrap mt-8 space-y-4 lmd:space-y-0">
-              <div className="border-slate-500 lmd:w-5/12 lmd:mr-8">
-                <Image
-                  src="/4.jpg"
-                  alt=""
-                  width={800}
-                  height={20}
-                  className=""
-                />
+          {/* About */}
+          <About />
+        </section>
+        {/* section 4 */}
+        <section
+          id="review"
+          className="min-h-screen text-slate-700 border-t-4 border-slate-700"
+        >
+          <div className="flex flex-col justify-between h-screen ">
+            <div className=" lg:container flex flex-col gap-6 px-4">
+              <div></div>
+              {/* title */}
+              <div className="min-h-[4rem] flex justify-center items-center">
+                <h1 className="text-3xl font-bold items-center">
+                  Satisfied Customer
+                </h1>
               </div>
-              <div className="lmd:w-5/12">
-                <h2 className="text-2xl sm:text-3xl font-bold lg:text-4xl mb-2">
-                  Complete Package Tour
-                </h2>
-                <h3 className="text-md lg:text-lg text-emerald-900 mb-2">
-                  The most satisfying service tour you&lsquo;ll ever try
-                </h3>
-                <p className="text-sm sm:text-base">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  sint harum fugiat, odit sunt veritatis aspernatur voluptatibus
-                  in soluta nesciunt ut veniam omnis, quia
-                  <span className="hidden lg:inline">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Esse saepe accusamus fugit laudantium error ipsa veritatis
-                    soluta cum commodi nihil.
-                  </span>
-                </p>
+              {/* review card gallery */}
+              <div className="flex flex-wrap lg:container">
+                {/* review card */}
+                <ReviewCard image="/avatar.jpg" />
+                <ReviewCard image="/avatar.jpg" />
+
+                <div className="w-full sm:flex flex-col gap-2 s:w-1/2 py-2 px-4 lmd:w-1/3 lg:w-1/4 mb-4 hidden">
+                  {/* profile & rating */}
+                  <div className="flex gap-6">
+                    {/* profile */}
+                    <div className="flex gap-2">
+                      <div className="rounded-full overflow-hidden">
+                        <Image
+                          src="/avatar.jpg"
+                          alt=""
+                          width={50}
+                          height={50}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold lmd:text-sm lg:text-lg">
+                          Renka Nawasena
+                        </h4>
+                        <p className="text-sm font-light">Food Blogger</p>
+                      </div>
+                    </div>
+                    {/* rating */}
+                    <div className="flex items-center">
+                      <AiFillStar size={20} color="#fbbf24" />
+                      <p>3.4</p>
+                    </div>
+                  </div>
+                  <hr />
+                  {/* comment */}
+                  <div>
+                    <p className=" text-sm text-slate-500">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Libero earum deserunt magni impedit saepe voluptates esse
+                      temporibus, qui ut sunt.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full sm:flex flex-col gap-2 s:w-1/2 py-2 px-4 lmd:w-1/3 lg:w-1/4 mb-4 hidden">
+                  {/* profile & rating */}
+                  <div className="flex gap-6">
+                    {/* profile */}
+                    <div className="flex gap-2">
+                      <div className="rounded-full overflow-hidden">
+                        <Image
+                          src="/avatar.jpg"
+                          alt=""
+                          width={50}
+                          height={50}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold lmd:text-sm lg:text-lg">
+                          Renka Nawasena
+                        </h4>
+                        <p className="text-sm font-light">Food Blogger</p>
+                      </div>
+                    </div>
+                    {/* rating */}
+                    <div className="flex items-center">
+                      <AiFillStar size={20} color="#fbbf24" />
+                      <p>3.4</p>
+                    </div>
+                  </div>
+                  <hr />
+                  {/* comment */}
+                  <div>
+                    <p className=" text-sm text-slate-500">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Libero earum deserunt magni impedit saepe voluptates esse
+                      temporibus, qui ut sunt.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full md:flex flex-col gap-2 s:w-1/2 py-2 px-4 lmd:w-1/3 lg:w-1/4 mb-4 hidden">
+                  {/* profile & rating */}
+                  <div className="flex gap-6">
+                    {/* profile */}
+                    <div className="flex gap-2">
+                      <div className="rounded-full overflow-hidden">
+                        <Image
+                          src="/avatar.jpg"
+                          alt=""
+                          width={50}
+                          height={50}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold lmd:text-sm lg:text-lg">
+                          Renka Nawasena
+                        </h4>
+                        <p className="text-sm font-light">Food Blogger</p>
+                      </div>
+                    </div>
+                    {/* rating */}
+                    <div className="flex items-center">
+                      <AiFillStar size={20} color="#fbbf24" />
+                      <p>3.4</p>
+                    </div>
+                  </div>
+                  <hr />
+                  {/* comment */}
+                  <div>
+                    <p className=" text-sm text-slate-500">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Libero earum deserunt magni impedit saepe voluptates esse
+                      temporibus, qui ut sunt.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full md:flex flex-col gap-2 s:w-1/2 py-2 px-4 lmd:w-1/3 lg:w-1/4 mb-4 hidden">
+                  {/* profile & rating */}
+                  <div className="flex gap-6">
+                    {/* profile */}
+                    <div className="flex gap-2">
+                      <div className="rounded-full overflow-hidden">
+                        <Image
+                          src="/avatar.jpg"
+                          alt=""
+                          width={50}
+                          height={50}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold lmd:text-sm lg:text-lg">
+                          Renka Nawasena
+                        </h4>
+                        <p className="text-sm font-light">Food Blogger</p>
+                      </div>
+                    </div>
+                    {/* rating */}
+                    <div className="flex items-center">
+                      <AiFillStar size={20} color="#fbbf24" />
+                      <p>3.4</p>
+                    </div>
+                  </div>
+                  <hr />
+                  {/* comment */}
+                  <div>
+                    <p className=" text-sm text-slate-500">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Libero earum deserunt magni impedit saepe voluptates esse
+                      temporibus, qui ut sunt.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full lg:flex flex-col gap-2 s:w-1/2 py-2 px-4 lmd:w-1/3 lg:w-1/4 mb-4 hidden">
+                  {/* profile & rating */}
+                  <div className="flex gap-6">
+                    {/* profile */}
+                    <div className="flex gap-2">
+                      <div className="rounded-full overflow-hidden">
+                        <Image
+                          src="/avatar.jpg"
+                          alt=""
+                          width={50}
+                          height={50}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold lmd:text-sm lg:text-lg">
+                          Renka Nawasena
+                        </h4>
+                        <p className="text-sm font-light">Food Blogger</p>
+                      </div>
+                    </div>
+                    {/* rating */}
+                    <div className="flex items-center">
+                      <AiFillStar size={20} color="#fbbf24" />
+                      <p>3.4</p>
+                    </div>
+                  </div>
+                  <hr />
+                  {/* comment */}
+                  <div>
+                    <p className=" text-sm text-slate-500">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Libero earum deserunt magni impedit saepe voluptates esse
+                      temporibus, qui ut sunt.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full lg:flex flex-col gap-2 s:w-1/2 py-2 px-4 lmd:w-1/3 lg:w-1/4 mb-4 hidden">
+                  {/* profile & rating */}
+                  <div className="flex gap-6">
+                    {/* profile */}
+                    <div className="flex gap-2">
+                      <div className="rounded-full overflow-hidden">
+                        <Image
+                          src="/avatar.jpg"
+                          alt=""
+                          width={50}
+                          height={50}
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold lmd:text-sm lg:text-lg">
+                          Renka Nawasena
+                        </h4>
+                        <p className="text-sm font-light">Food Blogger</p>
+                      </div>
+                    </div>
+                    {/* rating */}
+                    <div className="flex items-center">
+                      <AiFillStar size={20} color="#fbbf24" />
+                      <p>3.4</p>
+                    </div>
+                  </div>
+                  <hr />
+                  {/* comment */}
+                  <div>
+                    <p className=" text-sm text-slate-500">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Libero earum deserunt magni impedit saepe voluptates esse
+                      temporibus, qui ut sunt.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* playstore promotion */}
+              <div className="border bg-[url('/100.jpg')] bg-cover bg-no-repeat px-4 brightness-90 text-slate-100">
+                <div className="flex flex-col gap-2">
+                  <div className=" flex flex-col justify-center items-center gap-1 pt-6">
+                    <h2 className="text-2xl font-bold">
+                      Set your price alert now
+                    </h2>
+                    <p className="text-center">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iusto deleniti qui, in omnis eum ipsum suscipit
+                    </p>
+                  </div>
+                  <div className="flex justify-center gap-6 py-6">
+                    <button className="px-4 py-2 bg-slate-100 rounded-full text-slate-700 hover:bg-slate-400">
+                      App Store
+                    </button>
+                    <button className="px-4 py-2 bg-slate-100 rounded-full text-slate-700 hover:bg-slate-400">
+                      Google Play
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="lmd:flex lmd:flex-wrap lmd:justify-end mt-20 space-y-4 lmd:space-y-0">
-              <div className="border-slate-500 lmd:w-5/12 lmd:order-2">
-                <Image
-                  src="/3.jpg"
-                  alt=""
-                  width={800}
-                  height={20}
-                  className=""
-                />
+            {/* footer */}
+            <div className=" min-h-[11rem] px-5 md:px-8 bg-slate-300 text-slate-700 flex flex-col justify-center gap-2 md:gap-3">
+              <div className="flex justify-between">
+                {/* left */}
+                <div className="w-1/3">
+                  <h2 className="text-lg lg:text-xl font-bold">Travel</h2>
+                  <p className="text-xs lmd:text-sm">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    <span className="hidden lmd:inline">
+                      Atque molestiae quam aperiam rem illum quos. Doloribus
+                      iure quia accusamus minima atque consequatur
+                    </span>
+                  </p>
+                </div>
+                {/* right */}
+                <div className=" w-3/5 md:w-2/5 flex justify-between">
+                  <div className="w-30 flex flex-col">
+                    <h2 className="text-lg font-bold lg:text-xl">About</h2>
+                    <a className="text-xs lmd:text-sm" href="">
+                      How to Book
+                    </a>
+                    <a className="text-xs lmd:text-sm" href="">
+                      Contact Us
+                    </a>
+                    <a className="text-xs lmd:text-sm" href="">
+                      Help Center
+                    </a>
+                  </div>
+                  <div className="w-30 flex flex-col">
+                    <h2 className="text-lg font-bold lg:text-xl">Products</h2>
+                    <a className="text-xs lmd:text-sm" href="">
+                      Destination
+                    </a>
+                    <a className="text-xs lmd:text-sm" href="">
+                      Flight
+                    </a>
+                    <a className="text-xs lmd:text-sm" href="">
+                      Lodging
+                    </a>
+                  </div>
+                  <div className="w-30 flex flex-col">
+                    <h2 className="text-lg font-bold lg:text-xl">Social</h2>
+                    <a className="text-xs lmd:text-sm" href="">
+                      Facebook
+                    </a>
+                    <a className="text-xs lmd:text-sm" href="">
+                      Twitter
+                    </a>
+                    <a className="text-xs lmd:text-sm" href="">
+                      Instagram
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="lmd:w-5/12 lmd:order-1 lmd:mr-8">
-                <h2 className="text-2xl sm:text-3xl font-bold lg:text-4xl mb-2">
-                  Safe and Convinient Trip
-                </h2>
-                <h3 className="text-md lg:text-lg text-emerald-900 mb-2">
-                  Led by our trained and experienced tour guide
-                </h3>
-                <p className="text-sm sm:text-base">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  sint harum fugiat, odit sunt veritatis aspernatur voluptatibus
-                  in soluta nesciunt ut veniam omnis, quia{" "}
-                  <span className="hidden lg:inline">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Esse saepe accusamus fugit laudantium error ipsa veritatis
-                    soluta cum commodi nihil.
-                  </span>
-                </p>
+              {/* below */}
+              <div>
+                <hr />
               </div>
-            </div>
-            <div className="lmd:flex lmd:flex-wrap mt-20 space-y-4 lmd:space-y-0">
-              <div className="border-slate-500 lmd:w-5/12 lmd:mr-8">
-                <Image
-                  src="/5.jpg"
-                  alt=""
-                  width={800}
-                  height={20}
-                  className=""
-                />
-              </div>
-              <div className="lmd:w-5/12">
-                <h2 className="text-2xl sm:text-3xl font-bold lg:text-4xl mb-2">
-                  Pacify and Content Journey
-                </h2>
-                <h3 className="text-md lg:text-lg text-emerald-900 mb-2">
-                  The most satisfying service tour you&lsquo;ll ever try
-                </h3>
-                <p className="text-sm sm:text-base">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  sint harum fugiat, odit sunt veritatis aspernatur voluptatibus
-                  in soluta nesciunt ut veniam omnis, quia{" "}
-                  <span className="hidden lg:inline">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Esse saepe accusamus fugit laudantium error ipsa veritatis
-                    soluta cum commodi nihil.
-                  </span>
-                </p>
-              </div>
-            </div>
-            <div className="lmd:flex lmd:flex-wrap lmd:justify-end mt-20 space-y-4 lmd:space-y-0">
-              <div className="border-slate-500 lmd:w-5/12 lmd:order-2">
-                <Image
-                  src="/6.jpg"
-                  alt=""
-                  width={800}
-                  height={20}
-                  className=" brightness-110"
-                />
-              </div>
-              <div className="lmd:w-5/12 lmd:order-1 lmd:mr-8">
-                <h2 className="text-2xl sm:text-3xl font-bold lg:text-4xl mb-2">
-                  Nice and Comfy Lodging
-                </h2>
-                <h3 className="text-md lg:text-lg text-emerald-900 mb-2">
-                  Led by our trained and experienced tour guide
-                </h3>
-                <p className="text-sm sm:text-base">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  sint harum fugiat, odit sunt veritatis aspernatur voluptatibus
-                  in soluta nesciunt ut veniam omnis, quia{" "}
-                  <span className="hidden lg:inline">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Esse saepe accusamus fugit laudantium error ipsa veritatis
-                    soluta cum commodi nihil.
-                  </span>
-                </p>
+              <div className="flex justify-between">
+                <div>
+                  <p className="text-sm">Privacy Policy</p>
+                </div>
+                <div>
+                  <p className="text-sm">Copyright @ 2023 Travel</p>
+                </div>
               </div>
             </div>
           </div>
-          {/* About-2 */}
-          <div></div>
         </section>
+        {/* footer */}
       </div>
     </>
   );
