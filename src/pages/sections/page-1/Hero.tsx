@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -25,19 +26,19 @@ const Hero = () => {
           Get started on planning the best trip ever
         </h1>
         <div className="mt-6">
-          <a
+          <Link
             href="/Start"
             className="border text-slate-100 px-6 py-2 text-lg rounded-full backdrop-blur-sm md:px-8 md:py-3 md:text-xl md:hover:px-[34px] md:hover:py-[14px]  transition-all duration-300"
           >
             Get started
-          </a>
+          </Link>
         </div>
       </div>
       {/* scroll */}
       <div className="hidden xs:flex flex-col items-center px-5 group lg:px-8 2xl:px-1">
         <div className="w-6 h-6 rounded-full bg-slate-100 mb-3 group-hover:animate-bounce"></div>
         <a
-          href=""
+          href="#destinations"
           className="flex justify-center items-center px-1 py-2 border-2 w-6 md:w-7 rounded-full backdrop-blur"
         >
           <Image

@@ -99,12 +99,12 @@ export default function Login() {
               />
               <p className="text-sm text-center text-slate-500">
                 Dont have an account?{" "}
-                <a
+                <Link
                   href="/Register"
                   className="text-emerald-900 text-opacity-75 font-bold"
                 >
                   Register for free
-                </a>
+                </Link>
               </p>
             </form>
           </div>

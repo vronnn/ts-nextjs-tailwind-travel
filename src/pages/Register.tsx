@@ -137,12 +137,12 @@ export default function Register() {
                 <span className="text-slate-600 text-sm">
                   Yes, I understand and agree to the given{" "}
                 </span>
-                <a
+                <Link
                   href=""
                   className="text-emerald-900 text-opacity-75 text-sm underline"
                 >
                   Terms of Service
-                </a>
+                </Link>
               </label>
               <input
                 type="submit"
@@ -151,12 +151,12 @@ export default function Register() {
               />
               <p className="text-sm text-center text-slate-500">
                 Already have an account?{" "}
-                <a
+                <Link
                   href="/Register"
                   className="text-emerald-900 text-opacity-75 font-bold"
                 >
                   Log in
-                </a>
+                </Link>
               </p>
             </form>
           </div>
