@@ -25,9 +25,9 @@ const ReviewCard = ({ image }: ProfPic) => {
           </div>
         </div>
         {/* rating */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-1">
           <AiFillStar size={20} color="#fbbf24" />
-          <p>3.4</p>
+          <p className="text-slate-500">3.4</p>
         </div>
       </div>
       <hr />

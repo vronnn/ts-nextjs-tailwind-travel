@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 const NavVer = () => {
   const [active, setActive] = useState("home");
@@ -10,7 +11,7 @@ const NavVer = () => {
       <ul className="flex text-slate-300">
         <li className="group">
           <a
-            href=""
+            href="#home"
             className={`px-2 lg:mx-4 xl:mx-5 2xl:mx-6 group-hover:font-semibold ${
               active === "home" ? "text-slate-100 font-semibold" : ""
             }`}

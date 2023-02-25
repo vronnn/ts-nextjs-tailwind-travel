@@ -24,13 +24,13 @@ const Hero = () => {
         <h1 className="text-3xl xs:text-4xl max-w-xs text-slate-100 font-bold text-center md:text-5xl md:max-w-lg lg:max-w-xl lg:leading-tight">
           Get started on planning the best trip ever
         </h1>
-        <div>
-          <button
-            type="button"
-            className="border mt-6 text-slate-100 px-6 py-2 text-lg rounded-full backdrop-blur-sm md:px-8 md:py-3 md:text-xl md:hover:px-[34px] md:hover:py-[14px]  transition-all duration-300"
+        <div className="mt-6">
+          <a
+            href="/Start"
+            className="border text-slate-100 px-6 py-2 text-lg rounded-full backdrop-blur-sm md:px-8 md:py-3 md:text-xl md:hover:px-[34px] md:hover:py-[14px]  transition-all duration-300"
           >
             Get started
-          </button>
+          </a>
         </div>
       </div>
       {/* scroll */}
