@@ -55,7 +55,7 @@ const NavVer = () => {
         </li>
         <li className="group">
           <a
-            href="#contact"
+            href="#review"
             className={`px-2 lg:mx-4 xl:mx-5 2xl:mx-6 group-hover:font-semibold ${
               active === "contact" ? "text-slate-100 font-semibold" : ""
             }`}

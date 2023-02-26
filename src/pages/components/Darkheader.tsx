@@ -15,7 +15,7 @@ const Darkheader = () => {
         <div className="flex items-center justify-between relative min-h-[5.2rem]">
           {/* Logo */}
           <div className="flex items-center px-5 lg:px-10 lg:mr-6 order-1">
-            <Link href="http://localhost:3000/">
+            <Link href="/">
               <Image
                 src={"/dark-logo.png"}
                 width={65}
@@ -24,7 +24,7 @@ const Darkheader = () => {
               ></Image>
             </Link>
             <Link
-              href="http://localhost:3000/"
+              href="/"
               className="hidden lg:inline text-slate-700 text-lg sm:text-xl lg:text-2xl font-bold tracking-wide"
             >
               Travel

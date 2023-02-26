@@ -15,15 +15,20 @@ export default function Login() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormValues>();
+  } = useForm<FormValues>({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
 
   return (
     <>
       <main className="min-h-screen p-20 flex justify-center items-center">
         <Darkheader />
-        <section className="flex flex-wrap 2lg:border-t-2 2lg:border-b-2">
+        <section className="flex flex-wrap shadow-lg px-16 py-14 lg:p-0">
           {/* form */}
-          <div className="flex items-center mx-auto  mb-4 lg:px-16">
+          <div className="flex items-center mx-auto  mb-4 lg:px-16 lg:py-14">
             <form
               onSubmit={handleSubmit((data) => {
                 console.log(data);
@@ -47,7 +52,7 @@ export default function Login() {
                     width={24}
                     height={24}
                   ></Image>
-                  <p>Log in with Google</p>
+                  <p className="text-slate-600">Log in with Google</p>
                 </Link>
               </div>
               <div className="flex items-center gap-4">
@@ -58,13 +63,21 @@ export default function Login() {
               <input
                 type="text"
                 {...register("email", {
-                  required: true,
-                  pattern: /^\S+@\S+$/i,
+                  required: {
+                    value: true,
+                    message: "Email is required",
+                  },
+                  pattern: {
+                    value: /^\S+@\S+$/i,
+                    message: "Invalid email",
+                  },
                 })}
                 placeholder="Email"
-                className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1"
+                className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
               />
-              <p>{errors.email?.message}</p>
+              <p className="pl-4 text-sm text-red-600">
+                {errors.email?.message}
+              </p>
               <input
                 type="password"
                 {...register("password", {
@@ -78,9 +91,11 @@ export default function Login() {
                   },
                 })}
                 placeholder="Password"
-                className="rounded-lg shadow-lg py-2 px-4 my-1"
+                className="rounded-lg shadow-lg py-2 px-4 my-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
               />
-              <p>{errors.password?.message}</p>
+              <p className="pl-4 text-sm text-red-600">
+                {errors.password?.message}
+              </p>
               <label
                 htmlFor="reminder"
                 className="text-slate-700 px-1 mt-2 mb-6"
@@ -111,7 +126,7 @@ export default function Login() {
           {/* image */}
           <div className=" max-w-[345px] lg:max-w-[430px] 2lg:flex mx-auto hidden">
             <Image
-              src="/1.jpg"
+              src="/50.jpg"
               alt="img"
               width={600}
               height={20}

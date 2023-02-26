@@ -23,9 +23,9 @@ export default function Register() {
     <>
       <main className="min-h-screen p-20 flex justify-center items-center">
         <Darkheader />
-        <section className="flex flex-wrap xl:border-t-2 xl:border-b-2">
+        <section className="flex flex-wrap shadow-lg px-20 py-14 lg:p-0">
           {/* form */}
-          <div className="flex items-center mx-auto  mb-4 lg:px-16">
+          <div className="flex items-center mx-auto mb-4 lg:px-20 lg:py-14">
             <form
               onSubmit={handleSubmit((data) => {
                 console.log(data);
@@ -67,8 +67,8 @@ export default function Register() {
                         message: "This is required!",
                       },
                     })}
-                    placeholder="first name"
-                    className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:ring-1 focus:ring-emerald-900"
+                    placeholder="First name"
+                    className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
                   />
                   <p className="text-sm text-red-600 pl-2">
                     {errors.firstName?.message}
@@ -84,8 +84,8 @@ export default function Register() {
                         message: "This is required!",
                       },
                     })}
-                    placeholder="last name"
-                    className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:ring-1 focus:ring-emerald-900"
+                    placeholder="Last name"
+                    className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
                   />
                   <p className="text-sm text-red-600 pl-2">
                     {errors.lastName?.message}
@@ -102,7 +102,7 @@ export default function Register() {
                   },
                 })}
                 placeholder="Email"
-                className="rounded-lg shadow-lg py-2 px-4 my-2 focus:ring-1 focus:ring-emerald-900"
+                className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
               />
               <p className="text-sm text-red-600 pl-2">
                 {errors.email?.message}
@@ -112,7 +112,7 @@ export default function Register() {
                 {...register("password", {
                   required: {
                     value: true,
-                    message: "This is required!",
+                    message: "Enter your password",
                   },
                   minLength: {
                     value: 8,
@@ -120,7 +120,7 @@ export default function Register() {
                   },
                 })}
                 placeholder="Password"
-                className="rounded-lg shadow-lg py-2 px-4 mt-1 mb-4"
+                className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
               />
               <p className="text-sm text-red-600 pl-2">
                 {errors.password?.message}
@@ -163,11 +163,11 @@ export default function Register() {
           {/* image */}
           <div className=" max-w-[345px] lg:max-w-[480px] xl:flex mx-auto hidden">
             <Image
-              src="/1.jpg"
+              src="/55.jpg"
               alt="img"
               width={600}
               height={20}
-              className=" "
+              className=""
             />
           </div>
         </section>

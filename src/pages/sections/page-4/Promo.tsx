@@ -14,11 +14,11 @@ const Promo = () => {
           </p>
         </div>
         <div className="flex justify-center gap-6 py-6">
-          <button className="flex items-center gap-1 px-4 py-2 bg-slate-100 rounded-full text-slate-700 hover:bg-slate-700 hover:text-slate-100">
+          <button className="flex items-center border border-slate-700 gap-1 px-4 py-2 bg-slate-100 rounded-full text-slate-700 hover:bg-slate-700 hover:text-slate-100">
             <IoLogoApple size={22} />
             <p>App Store</p>
           </button>
-          <button className="flex items-center gap-1 px-4 py-2 bg-slate-100 rounded-full text-slate-700 hover:bg-slate-700 hover:text-slate-100">
+          <button className="flex items-center border border-slate-700 gap-1 px-4 py-2 bg-slate-100 rounded-full text-slate-700 hover:bg-slate-700 hover:text-slate-100">
             <IoLogoGooglePlaystore />
             <p>Google Play</p>
           </button>
