@@ -23,6 +23,24 @@ export default function Login() {
     },
   });
 
+  register("email", {
+    required: "Email is required",
+    pattern: {
+      value: /^\S+@\S+$/i,
+      message: "Invalid email",
+    },
+  });
+
+  register("password", {
+    required: "This is required",
+    minLength: {
+      value: 8,
+      message: "minimum 8 characters",
+    },
+  });
+
+  console.log("errors", errors);
+
   return (
     <>
       <main className="min-h-screen p-20 flex justify-center items-center">
@@ -64,16 +82,7 @@ export default function Login() {
               </div>
               <input
                 type="text"
-                {...register("email", {
-                  required: {
-                    value: true,
-                    message: "Email is required",
-                  },
-                  pattern: {
-                    value: /^\S+@\S+$/i,
-                    message: "Invalid email",
-                  },
-                })}
+                {...register("email")}
                 placeholder="Email"
                 className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
               />
@@ -82,16 +91,7 @@ export default function Login() {
               </p>
               <input
                 type="password"
-                {...register("password", {
-                  required: {
-                    value: true,
-                    message: "This is required!",
-                  },
-                  minLength: {
-                    value: 8,
-                    message: "minimum 8 characters",
-                  },
-                })}
+                {...register("password")}
                 placeholder="Password"
                 className="rounded-lg shadow-lg py-2 px-4 my-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
               />

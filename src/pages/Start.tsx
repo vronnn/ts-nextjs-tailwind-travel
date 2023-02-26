@@ -25,18 +25,25 @@ export default function Login() {
     formState: { errors },
   } = useForm<FormValues>({
     defaultValues: {
+      location: "",
       persons: 1,
     },
   });
 
-  type fieldType = {
-    onshow: boolean;
-  };
+  register("location", { required: "Pick a destination" });
 
+  register("date", { required: "Pick a date" });
+
+  register("persons", {
+    required: "This is required",
+    min: {
+      value: 1,
+      message: "Minimum 1 person",
+    },
+  });
+
+  console.log("errors", errors);
   const [show, setShow] = useState(false);
-  const showSide = (value: boolean) => {
-    setShow(value);
-  };
 
   return (
     <>
@@ -46,7 +53,7 @@ export default function Login() {
           {/* form */}
           <div className="flex items-center mx-auto mb-4 lg:p-20">
             <form
-              onSubmit={handleSubmit((data) => {
+              onSubmit={handleSubmit((data: FormValues) => {
                 console.log(data);
                 setShow(true);
                 reset();
@@ -65,12 +72,7 @@ export default function Login() {
 
                 <input
                   type="search"
-                  {...register("location", {
-                    required: {
-                      value: true,
-                      message: "Pick a destination",
-                    },
-                  })}
+                  {...register("location")}
                   className="px-4 py-2 grow bg-slate-50 rounded-lg border-l focus:outline-none focus:ring-2 focus:ring-emerald-900"
                 />
               </div>
@@ -101,12 +103,7 @@ export default function Login() {
               </div>
               <input
                 type="date"
-                {...register("date", {
-                  required: {
-                    value: true,
-                    message: "Pick a date",
-                  },
-                })}
+                {...register("date")}
                 className="px-4 py-2 rounded-lg shadow focus:outline-none focus:ring-1 focus:ring-emerald-900"
               />
               <p className="text-sm px-4 text-red-600">
@@ -124,6 +121,9 @@ export default function Login() {
                   <p className=""> person/s</p>
                 </div>
               </label>
+              <p className="text-sm px-4 text-red-600">
+                {errors.persons?.message}
+              </p>
               <label
                 htmlFor="price"
                 className="flex flex-col px-4 py-2 rounded-lg shadow gap-y-2"
@@ -167,14 +167,6 @@ export default function Login() {
                   <p className="">With regard,</p>
                   <div className="flex items-center gap-x-2">
                     <h3 className="text-xl font-bold">Travel</h3>
-                    {/* <div>
-                      <Image
-                        src="/dark-logo.png"
-                        alt="img"
-                        width={50}
-                        height={24}
-                      />
-                    </div> */}
                   </div>
                 </div>
               </div>

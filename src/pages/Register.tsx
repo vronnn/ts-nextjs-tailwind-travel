@@ -9,7 +9,7 @@ type FormValues = {
   lastName: string;
   email: string;
   password: string;
-  remainder: string;
+  remainder: boolean;
 };
 
 export default function Register() {
@@ -18,7 +18,37 @@ export default function Register() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<FormValues>();
+  } = useForm<FormValues>({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      remainder: false,
+    },
+  });
+
+  register("firstName", { required: "This is required" });
+
+  register("lastName", { required: "This is required" });
+
+  register("email", {
+    required: "Enter your email",
+    pattern: {
+      value: /^\S+@\S+$/i,
+      message: "Invalid email",
+    },
+  });
+
+  register("password", {
+    required: "Enter your password",
+    minLength: {
+      value: 8,
+      message: "minimum 8 characters",
+    },
+  });
+
+  console.log("errors", errors);
 
   return (
     <>
@@ -28,7 +58,7 @@ export default function Register() {
           {/* form */}
           <div className="flex items-center mx-auto mb-4 lg:px-20 lg:py-14">
             <form
-              onSubmit={handleSubmit((data) => {
+              onSubmit={handleSubmit((data: FormValues) => {
                 console.log(data);
                 reset();
               })}
@@ -63,12 +93,7 @@ export default function Register() {
                 <div>
                   <input
                     type="text"
-                    {...register("firstName", {
-                      required: {
-                        value: true,
-                        message: "This is required!",
-                      },
-                    })}
+                    {...register("firstName")}
                     placeholder="First name"
                     className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
                   />
@@ -80,12 +105,7 @@ export default function Register() {
                 <div>
                   <input
                     type="text"
-                    {...register("lastName", {
-                      required: {
-                        value: true,
-                        message: "This is required!",
-                      },
-                    })}
+                    {...register("lastName")}
                     placeholder="Last name"
                     className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
                   />
@@ -96,13 +116,7 @@ export default function Register() {
               </div>
               <input
                 type="text"
-                {...register("email", {
-                  required: true,
-                  pattern: {
-                    value: /^\S+@\S+$/i,
-                    message: "Invalid email",
-                  },
-                })}
+                {...register("email")}
                 placeholder="Email"
                 className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
               />
@@ -111,16 +125,7 @@ export default function Register() {
               </p>
               <input
                 type="password"
-                {...register("password", {
-                  required: {
-                    value: true,
-                    message: "Enter your password",
-                  },
-                  minLength: {
-                    value: 8,
-                    message: "minimum 8 characters",
-                  },
-                })}
+                {...register("password")}
                 placeholder="Password"
                 className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
               />
