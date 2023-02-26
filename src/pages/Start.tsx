@@ -21,6 +21,7 @@ export default function Login() {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm<FormValues>({
     defaultValues: {
@@ -48,6 +49,7 @@ export default function Login() {
               onSubmit={handleSubmit((data) => {
                 console.log(data);
                 setShow(true);
+                reset();
               })}
               className="flex flex-col gap-y-1 min-w-[500px]"
             >

@@ -14,6 +14,7 @@ export default function Login() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormValues>({
     defaultValues: {
@@ -32,6 +33,7 @@ export default function Login() {
             <form
               onSubmit={handleSubmit((data) => {
                 console.log(data);
+                reset();
               })}
               className="flex flex-col"
             >
