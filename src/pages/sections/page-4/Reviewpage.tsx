@@ -9,8 +9,8 @@ const Reviewpage = () => {
       id="review"
       className="min-h-screen text-slate-700 flex flex-col justify-between"
     >
-      <div className="flex flex-col justify-between py-4">
-        <div className=" lg:container flex justify-center items-center ">
+      <div className="flex justify-center items-center review-container">
+        <div className=" lg:container flex justify-center items-center">
           {/* review card gallery */}
           <Review />
           {/* playstore promotion */}

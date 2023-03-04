@@ -5,7 +5,7 @@ import { AiFillStar } from "react-icons/ai";
 
 const Review = () => {
   return (
-    <div className="flex flex-wrap lg:container px-4">
+    <div className="flex flex-wrap lg:container px-4 ">
       {/* review card */}
       <div className="w-full flex s:w-1/2 py-2 px-4 lmd:w-1/3 lg:w-1/4 mb-4">
         <ReviewCard

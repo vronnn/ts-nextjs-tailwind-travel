@@ -17,7 +17,7 @@ const About = () => {
         desc="Led by our trained and experienced tour guide"
       />
       <RightCard
-        image="/5.jpg"
+        image="/23.jpg"
         title="Pacify and Content Journey"
         desc="The most satisfying service tour you&lsquo;ll ever try"
       />
