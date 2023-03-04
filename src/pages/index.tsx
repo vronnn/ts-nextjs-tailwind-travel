@@ -5,6 +5,7 @@ import Homepage from "./sections/page-1/Homepage";
 import Destpage from "./sections/page-2/Destpage";
 import Aboutpage from "./sections/page-3/Aboutpage";
 import Reviewpage from "./sections/page-4/Reviewpage";
+import Footer from "@/pages/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 

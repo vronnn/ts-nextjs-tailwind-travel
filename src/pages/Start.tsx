@@ -103,6 +103,7 @@ export default function Login() {
               </div>
               <input
                 type="date"
+                min={new Date().toISOString().split("T")[0]}
                 {...register("date")}
                 className="px-4 py-2 rounded-lg shadow focus:outline-none focus:ring-1 focus:ring-emerald-900"
               />

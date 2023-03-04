@@ -6,9 +6,12 @@ import Gallery from "./Gallery";
 
 const Destpage = () => {
   return (
-    <section id="destinations" className="min-h-screen px-4 text-slate-700">
+    <section
+      id="destinations"
+      className="min-h-screen px-4 text-slate-700 flex flex-col justify-center"
+    >
       {/* container */}
-      <div className="lg:container flex flex-col">
+      <div className="lg:container flex flex-col gap-y-8 items-center">
         {/* Title */}
         <Title />
         {/* Search */}

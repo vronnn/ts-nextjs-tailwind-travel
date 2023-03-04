@@ -10,8 +10,8 @@ type aboutContent = {
 
 const RightCard = ({ image, title, desc }: aboutContent) => {
   return (
-    <div className="lmd:flex lmd:flex-wrap mt-20 space-y-4 lmd:space-y-0">
-      <div className="border-slate-500 lmd:w-5/12 lmd:mr-8">
+    <div className="lmd:flex lmd:flex-wrap gap-x-14">
+      <div className="border-slate-500 lmd:w-5/12">
         <Image src={image} alt="" width={800} height={20} className="" />
       </div>
       <div className="lmd:w-6/12 flex flex-col justify-center">

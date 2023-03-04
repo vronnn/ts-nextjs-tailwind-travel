@@ -5,11 +5,15 @@ import { AiFillStar } from "react-icons/ai";
 
 type ProfPic = {
   image: string;
+  name: string;
+  job: string;
+  rate: number;
+  comment: string;
 };
 
-const ReviewCard = ({ image }: ProfPic) => {
+const ReviewCard = ({ image, name, job, rate, comment }: ProfPic) => {
   return (
-    <div className="w-full flex flex-col gap-2 s:w-1/2 py-2 px-4 lmd:w-1/3 lg:w-1/4 mb-4">
+    <div className="flex flex-col gap-2">
       {/* profile & rating */}
       <div className="flex gap-6">
         {/* profile */}
@@ -19,24 +23,21 @@ const ReviewCard = ({ image }: ProfPic) => {
           </div>
           <div>
             <h4 className="text-lg lmd:text-sm lg:text-lg font-semibold">
-              Renka Nawasena
+              {name}
             </h4>
-            <p className="text-sm font-light">Food Blogger</p>
+            <p className="text-sm font-light">{job}</p>
           </div>
         </div>
         {/* rating */}
         <div className="flex items-center gap-1">
-          <AiFillStar size={20} color="#fbbf24" />
-          <p className="text-slate-500">3.4</p>
+          <AiFillStar size={20} color="#134e4a" />
+          <p className="text-slate-500 font-semibold">{rate}</p>
         </div>
       </div>
       <hr />
       {/* comment */}
       <div>
-        <p className=" text-sm text-slate-500">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero earum
-          deserunt magni impedit saepe voluptates esse temporibus, qui ut sunt.
-        </p>
+        <p className=" text-sm text-slate-500">{comment}</p>
       </div>
     </div>
   );

@@ -1,73 +1,175 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaPinterest } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
+import { FaGooglePlay } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className=" min-h-[11rem] px-5 md:px-10 bg-slate-600 text-slate-200 flex flex-col justify-center gap-2 md:gap-3">
-      <div className="flex justify-between">
-        {/* left */}
-        <div className="w-1/3">
-          <h2 className="text-base lg:text-lg font-bold">Travel</h2>
-          <p className="text-xs xl:text-sm">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            <span className="hidden xl:inline">
-              Atque molestiae quam aperiam rem illum quos. Doloribus iure quia
-              accusamus minima atque consequatur
-            </span>
-          </p>
+    // <section className="h-screen relative">
+    <footer className="relative bottom-0 w-full h-[48rem] lg:h-[33rem] flex flex-col gap-y-2 bg-[#f4f4f4] pt-8 pb-2">
+      {/* upper */}
+      <div className="flex flex-wrap gap-x-8 justify-center items-center px-4 lg:px-0 gap-y-6 lg:gap-y-10">
+        {/* main */}
+        <div className="flex items-center xl:w-2/5 gap-x-10">
+          <Image
+            src="/home-footer-iphone.png"
+            alt="img"
+            width={160}
+            height={100}
+            className="rounded-3xl shadow hidden md:block"
+          />
+          <div className="flex flex-col justify-center gap-y-4">
+            <div className="flex flex-col gap-y-2 text-slate-700">
+              <h4 className=" text-xl font-bold">Travel Application</h4>
+              <p className=" max-w-xs">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                libero, eveniet officia minima numquam at deleniti obcaecati
+                illo dolores architecto ratione quod nisi
+              </p>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <Link
+                href=""
+                className="px-4 py-2 border border-slate-700 rounded-3xl flex items-center justify-center gap-x-2 max-w-sm font-semibold hover:bg-emerald-900 hover:text-slate-100"
+              >
+                <FaApple size={20} /> Download on IOS
+              </Link>
+              <Link
+                href=""
+                className="px-4 py-2 border border-slate-700 rounded-3xl flex items-center justify-center gap-x-2 max-w-sm font-semibold hover:bg-emerald-900 hover:text-slate-100"
+              >
+                <FaGooglePlay size={18} /> Download on Android
+              </Link>
+            </div>
+          </div>
         </div>
-        {/* right */}
-        <div className=" w-3/5 md:w-2/5 flex justify-between">
-          <div className="w-30 flex flex-col">
-            <h2 className="text-base font-bold lg:text-lg">About</h2>
-            <a className="text-xs xl:text-sm" href="">
-              How to Book
-            </a>
-            <a className="text-xs xl:text-sm" href="">
-              Contact Us
-            </a>
-            <a className="text-xs xl:text-sm" href="">
-              Help Center
-            </a>
-          </div>
-          <div className="w-30 flex flex-col">
-            <h2 className="text-base font-bold lg:text-lg">Products</h2>
-            <a className="text-xs xl:text-sm" href="">
-              Destination
-            </a>
-            <a className="text-xs xl:text-sm" href="">
-              Flight
-            </a>
-            <a className="text-xs xl:text-sm" href="">
-              Lodging
-            </a>
-          </div>
-          <div className="w-30 flex flex-col">
-            <h2 className="text-base font-bold lg:text-lg">Social</h2>
-            <a className="text-xs xl:text-sm" href="">
-              Facebook
-            </a>
-            <a className="text-xs xl:text-sm" href="">
-              Twitter
-            </a>
-            <a className="text-xs xl:text-sm" href="">
-              Instagram
-            </a>
+        {/* Link */}
+        <div className="flex flex-col xl:w-2/5 gap-y-4 text-slate-700">
+          <h4 className=" text-xl font-bold">Important Link</h4>
+          <div className="flex items-center gap-x-24">
+            <ul>
+              <li>
+                <a href="">Travel Brosure</a>
+              </li>
+              <li>
+                <a href="">Customer Service</a>
+              </li>
+              <li>
+                <a href="">Contact Us</a>
+              </li>
+              <li>
+                <a href="">About Travel</a>
+              </li>
+              <li>
+                <a href="">FAQ</a>
+              </li>
+              <li>
+                <a href="">Travel Services</a>
+              </li>
+              <li>
+                <a href="">Flight Schedule</a>
+              </li>
+              <li>
+                <a href="">Book Resort</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="">Travel Brosure</a>
+              </li>
+              <li>
+                <a href="">Customer Service</a>
+              </li>
+              <li>
+                <a href="">Contact Us</a>
+              </li>
+              <li>
+                <a href="">About Travel</a>
+              </li>
+              <li>
+                <a href="">FAQ</a>
+              </li>
+              <li>
+                <a href="">Travel Services</a>
+              </li>
+              <li>
+                <a href="">Flight Schedule</a>
+              </li>
+              <li>
+                <a href="">Book Resort</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      {/* below */}
-      <div>
-        <hr />
-      </div>
-      <div className="flex justify-between">
-        <div>
-          <p className="text-sm">Privacy Policy</p>
+      {/* mid */}
+      <div className="flex flex-wrap justify-evenly lg:flex-col lg:justify-center items-center gap-y-4">
+        <div className="flex items-center gap-x-2">
+          <div>
+            <FaFacebook size={20} color="#334155" />
+          </div>
+          <div>
+            <FaInstagram size={20} color="#334155" />
+          </div>
+          <div>
+            <FaPinterest size={20} color="#334155" />
+          </div>
+          <div>
+            <FaTwitter size={20} color="#334155" />
+          </div>
+          <div>
+            <FaYoutube size={20} color="#334155" />
+          </div>
+          <div>
+            <FaTiktok size={20} color="#334155" />
+          </div>
         </div>
-        <div>
-          <p className="text-sm">Copyright @ 2023 Travel</p>
+        <div className="flex items-center gap-x-2">
+          <Link href="" className="uppercase font-semibold">
+            en
+          </Link>
+          <div className="border-r-[1px] border-slate-500 w-1 h-3/5"></div>
+          <Link href="" className="uppercase">
+            id
+          </Link>
         </div>
       </div>
-    </div>
+      {/* lower */}
+      <div className="absolute bottom-0 w-full">
+        <div className="flex justify-center w-full">
+          <div className="w-11/12 border-t-[1px] border-slate-300"></div>
+        </div>
+        <div className="flex flex-wrap justify-between items-center min-h-[5rem] px-4 lg:px-16">
+          <div className="">
+            <Link href="" className="text-xs">
+              &#169; Inter Travel Systems B.V.2014 - 2023
+            </Link>
+          </div>
+          <div className="flex flex-wrap items-center gap-x-2">
+            <Link href="" className="text-xs">
+              Privacy Policy
+            </Link>
+            <Link href="" className="text-xs">
+              Price Disclaimer
+            </Link>
+            <Link href="" className="text-xs">
+              Responsible Disclosure
+            </Link>
+            <Link href="" className="text-xs">
+              Cookie Policy
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+    // </section>
   );
 };
 
