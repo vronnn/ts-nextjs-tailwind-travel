@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { GoPerson } from "react-icons/go";
 import { AiOutlineDownload } from "react-icons/ai";
@@ -7,25 +6,16 @@ import { AiOutlineDownload } from "react-icons/ai";
 interface Props {
   photo: {
     id: number;
-    url: string;
     photographer: string;
     photographerUrl: string;
     src: {
-      original: string;
       large2x: string;
-      large: string;
-      medium: string;
-      small: string;
-      portrait: string;
-      landscape: string;
-      tiny: string;
     };
     alt: string;
-    link: string;
   };
 }
 
-const Photo: React.FC<Props> = ({ photo }) => {
+function Photo({ photo }: Props) {
   return (
     <div className="relative group/card overflow-hidden">
       <Image src={photo.src.large2x} alt={photo.alt} width={920} height={20} />
@@ -50,6 +40,6 @@ const Photo: React.FC<Props> = ({ photo }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Photo;
