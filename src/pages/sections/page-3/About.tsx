@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import LeftCard from "@/pages/components/LeftCard";
-import RightCard from "@/pages/components/RightCard";
+import LeftCard from "@/components/LeftCard";
+import RightCard from "@/components/RightCard";
 
 const About = () => {
   return (

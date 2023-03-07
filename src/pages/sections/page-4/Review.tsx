@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ReviewCard from "@/pages/components/ReviewCard";
+import ReviewCard from "@/components/ReviewCard";
 import { AiFillStar } from "react-icons/ai";
 
 const Review = () => {

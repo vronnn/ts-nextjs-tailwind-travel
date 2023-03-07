@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { IoChevronDownCircle } from "react-icons/io5";
-import Card from "@/pages/components/Card";
+import Card from "@/components/Card";
 
 const Gallery = () => {
   return (

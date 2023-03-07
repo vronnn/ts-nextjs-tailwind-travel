@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Link from "next/link";
-import Darkheader from "./components/Darkheader";
+import Darkheader from "@/components/Darkheader";
 
 type FormValues = {
   email: string;

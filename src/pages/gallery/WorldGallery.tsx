@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import { NextPage } from "next";
 import World from "./World";
-import Header from "../components/Header";
+import Header from "@/components/Header";
 import { IoSearchOutline } from "react-icons/io5";
 
 const Home: NextPage = () => {

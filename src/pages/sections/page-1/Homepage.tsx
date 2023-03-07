@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "@/pages/components/Header";
-import Content from "@/pages/components/Content";
+import Header from "@/components/Header";
+import Content from "@/components/Content";
 
 const Homepage = () => {
   return (

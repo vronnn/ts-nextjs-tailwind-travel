@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { fetchPhotoData, PexelsPhoto } from "../api/api";
-import Details from "../components/shared/Details";
+import Details from "@/components/shared/Details";
 
 export default function Gallery() {
   const router = useRouter();

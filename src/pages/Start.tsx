@@ -3,9 +3,7 @@ import { useForm, useFieldArray } from "react-hook-form";
 import { HiMapPin } from "react-icons/hi2";
 import { MdPerson } from "react-icons/md";
 import Image from "next/image";
-import Link from "next/link";
-import Darkheader from "./components/Darkheader";
-import { type } from "os";
+import Darkheader from "@/components/Darkheader";
 
 type FormValues = {
   location: string;

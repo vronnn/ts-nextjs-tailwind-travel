@@ -1,7 +1,7 @@
 import React from "react";
 import Review from "./Review";
 import Promo from "./Promo";
-import Footer from "@/pages/components/Footer";
+import Footer from "@/components/Footer";
 
 const Reviewpage = () => {
   return (

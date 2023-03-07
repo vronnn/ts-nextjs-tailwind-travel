@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "../sections/page-1/Hero";
-import Desc from "../sections/page-1/Desc";
+import Hero from "@/pages/sections/page-1/Hero";
+import Desc from "@/pages/sections/page-1/Desc";
 
 const Content = () => {
   return (
