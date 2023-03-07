@@ -24,7 +24,7 @@ const Header = () => {
               ></Image>
             </Link>
             <Link
-              href=""
+              href="/"
               className="hidden lg:inline text-slate-100 text-lg sm:text-xl lg:text-[1.375rem] font-bold tracking-wide"
             >
               Travel

@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Navigation from "./Navigation";
+import { Navdata } from "@/constant/Data";
 
 const NavVer = () => {
   return (
     <nav id="nav-menu" className="hidden lg:block">
       <ul className="flex text-slate-300">
-        <Navigation title="Home" reference="home" />
-        <Navigation title="Destinations" reference="destinations" />
-        <Navigation title="About" reference="about" />
-        <Navigation title="Review" reference="review" />
-        <Navigation title="Contact" reference="review" />
+        {Navdata.map((item) => (
+          <div key={item.reference}>
+            <Navigation title={item.title} reference={item.reference} />
+          </div>
+        ))}
       </ul>
     </nav>
   );

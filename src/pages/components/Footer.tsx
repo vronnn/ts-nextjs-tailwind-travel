@@ -13,17 +13,20 @@ import { FaGooglePlay } from "react-icons/fa";
 const Footer = () => {
   return (
     // <section className="h-screen relative">
-    <footer className="relative bottom-0 w-full h-[48rem] lg:h-[33rem] flex flex-col gap-y-2 bg-[#f4f4f4] pt-8 pb-2">
+    <footer
+      id="contact"
+      className="relative bottom-0 w-full h-[48rem] lg:h-[33rem] flex flex-col gap-y-2 bg-[#f4f4f4] pt-8 pb-2"
+    >
       {/* upper */}
       <div className="flex flex-wrap gap-x-8 justify-center items-center px-4 lg:px-0 gap-y-6 lg:gap-y-10">
         {/* main */}
         <div className="flex items-center xl:w-2/5 gap-x-10">
           <Image
-            src="/home-footer-iphone.png"
+            src="/travel_mockup.png"
             alt="img"
-            width={160}
+            width={180}
             height={100}
-            className="rounded-3xl shadow hidden md:block"
+            className="hover:scale-105 transition-all duration-300"
           />
           <div className="flex flex-col justify-center gap-y-4">
             <div className="flex flex-col gap-y-2 text-slate-700">

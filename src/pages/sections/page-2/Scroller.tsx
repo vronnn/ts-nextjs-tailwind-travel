@@ -71,7 +71,7 @@ const Scroller = () => {
           5
         </button>
         <Link
-          href="/Gallery"
+          href="/gallery/WorldGallery"
           className={`px-4 py-2 border bg-slate-700 text-slate-100 shadow-md hover:bg-slate-100 hover:text-slate-700  rounded-full hidden sm:inline-flex items-center justify-center gap-x-2 ${
             active === 6 ? "border-none bg-slate-700 text-slate-100" : ""
           }`}

@@ -10,6 +10,10 @@
   height: calc(100vh - 20rem);
 }
 
+.hero-search {
+  height: calc(65vh - 5.2rem);
+}
+
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;
