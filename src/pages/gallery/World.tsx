@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { searchPhotos, PexelsPhoto } from "../api/api";
-import Photo from "./Photo";
+import Photo from "../components/shared/Photo";
 import { AiOutlineArrowDown } from "react-icons/ai";
 
 interface Props {
