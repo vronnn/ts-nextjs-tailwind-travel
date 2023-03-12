@@ -7,14 +7,11 @@ import { IoMdPhotos } from "react-icons/io";
 
 const Second = () => {
   return (
-    <section
-      id="about"
-      className="min-h-screen flex flex-col justify-end lg:container"
-    >
+    <section id="about" className="flex flex-col justify-end 2xl:container">
       <div className="min-h-[7rem]"></div>
-      <div className="flex flex-col pb-10 box-border cont-height justify-between gap-y-14 ">
-        <div className="flex flex-wrap justify-between px-8 gap-y-6 xl:px-0">
-          <div className="flex flex-col gap-y-10 lmd:w-[47%]">
+      <div className="flex flex-col cont-height justify-center gap-y-28 box-border">
+        <div className="flex flex-wrap justify-center px-8 gap-y-6 gap-x-6 xl:px-0">
+          <div className="flex flex-col gap-y-10 lmd:w-[45%] px-6 box-border">
             <div className="flex flex-col gap-y-6">
               <h1 className="text-3xl font-bold text-gray-700 md:text-4xl lg:text-5xl lmd:max-w-lg">
                 The most populer travel agency in the world
@@ -51,7 +48,7 @@ const Second = () => {
             </div>
           </div>
           {/* image */}
-          <div className="w-full lmd:w-[47%]">
+          <div className="w-full lmd:w-[45%] px-6 box-border">
             <div className="bg-[url('/pg2-2.jpg')] h-[20rem] w-full bg-cover bg-center shadow-2xl lmd:h-3/4 lg:h-[90%] relative">
               <div className="absolute -bottom-4 -right-4 shadow-2xl border-8 border-gray-200">
                 <Image src="/pg2-4.jpg" alt="" width={200} height={50} />
@@ -59,8 +56,8 @@ const Second = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center">
-          <div className="w-[80%] flex justify-between px-8 lmd:px-10 box-border">
+        <div className="flex items-center justify-start px-8 xl:px-16">
+          <div className="w-[80%] flex justify-between px-6 box-border">
             <div className="flex items-start gap-x-3">
               <MdOutlineTravelExplore size={30} />
               <div>
