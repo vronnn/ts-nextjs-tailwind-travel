@@ -9,7 +9,7 @@ const Second = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col justify-end xl:container"
+      className="min-h-screen flex flex-col justify-end lg:container"
     >
       <div className="min-h-[7rem]"></div>
       <div className="flex flex-col pb-10 box-border cont-height justify-between gap-y-14 ">
