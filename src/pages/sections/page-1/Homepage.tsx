@@ -1,17 +1,23 @@
 import React from "react";
 import Header from "@/components/Header";
-import Content from "@/components/Content";
+import Hero from "./Hero";
+import Desc from "./Desc";
 
 const Homepage = () => {
   return (
     <main
       id="home"
-      className={`min-h-screen bg-[url('/forest-dark.jpg')] bg-cover bg-no-repeat mb-4`}
+      className={`min-h-screen bg-[url('/forest-dark.jpg')] bg-cover bg-no-repeat`}
     >
       {/* header */}
       <Header />
       {/* content */}
-      <Content />
+      <div className="w-full h-screen">
+        {/* social, hero, scroll */}
+        <Hero />
+        {/* desc */}
+        <Desc />
+      </div>
     </main>
   );
 };

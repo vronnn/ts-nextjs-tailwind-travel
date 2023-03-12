@@ -2,6 +2,7 @@ import React, { UIEvent } from "react";
 import Nav from "./Nav";
 import Image from "next/image";
 import Link from "next/link";
+import { FaPlaneDeparture } from "react-icons/fa";
 
 const Darkheader = () => {
   const handleUIEvent = (e: UIEvent<HTMLDivElement>) => {};
@@ -14,18 +15,13 @@ const Darkheader = () => {
       >
         <div className="flex items-center justify-between relative min-h-[5.2rem]">
           {/* Logo */}
-          <div className="flex items-center px-5 lg:px-10 lg:mr-6 order-1">
+          <div className="flex items-center gap-x-4 px-6 lg:px-12 lg:mr-12 order-1">
             <Link href="/">
-              <Image
-                src={"/dark-logo.png"}
-                width={65}
-                height={20}
-                alt=""
-              ></Image>
+              <FaPlaneDeparture size={25} color={`#374151`} />
             </Link>
             <Link
               href="/"
-              className="hidden lg:inline text-slate-700 text-lg sm:text-xl lg:text-2xl font-bold tracking-wide"
+              className={`hidden lg:inline text-gray-700 text-lg sm:text-xl lg:text-[1.375rem] font-bold tracking-wide`}
             >
               Travel
             </Link>

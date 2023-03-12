@@ -4,6 +4,7 @@ import { HiMapPin } from "react-icons/hi2";
 import { MdPerson } from "react-icons/md";
 import Image from "next/image";
 import Darkheader from "@/components/Darkheader";
+import Dropdown from "@/components/Dropdown";
 
 type FormValues = {
   location: string;
@@ -40,6 +41,8 @@ export default function Login() {
     },
   });
 
+  register("transport", { required: true });
+
   console.log("errors", errors);
   const [show, setShow] = useState(false);
 
@@ -47,9 +50,30 @@ export default function Login() {
     <>
       <main className="min-h-screen p-20 flex justify-center items-center">
         <Darkheader />
-        <section className="flex shadow-lg p-20 lg:p-0">
-          {/* form */}
-          <div className="flex items-center mx-auto mb-4 lg:p-20">
+
+        {/* image */}
+        {show ? (
+          <div className="flex justify-center items-center p-14 h-[30rem] text-slate-700 shadow-lg">
+            <div className="flex flex-col h-full justify-between">
+              <div className="">
+                <h1 className="text-2xl font-semibold my-2">
+                  Thank you for choosing us to be your travel companion
+                </h1>
+                <p>
+                  We will notify you regarding your schedule as soon as possible
+                </p>
+                <p>Hope you enjoy your experience with us</p>
+              </div>
+              <div>
+                <p className="">With regard,</p>
+                <div className="flex items-center gap-x-2">
+                  <h3 className="text-xl font-bold">Travel</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="flex items-center mx-auto mb-4 lg:p-20 shadow-lg">
             <form
               onSubmit={handleSubmit((data: FormValues) => {
                 console.log(data);
@@ -78,6 +102,14 @@ export default function Login() {
                 {errors.location?.message}
               </p>
               <div>
+                {/* <Dropdown
+                name="transport"
+                register={register}
+                label="Transport"
+                opt1="Plane"
+                opt2="Train"
+                opt3="Ship"
+              /> */}
                 <label htmlFor="Transport">
                   <select
                     {...register("transport")}
@@ -148,30 +180,8 @@ export default function Login() {
               />
             </form>
           </div>
-          {/* image */}
-          {show ? (
-            <div className="pt-20 pb-28 pr-20 text-slate-700">
-              <div className="flex flex-col h-full justify-between">
-                <div className="">
-                  <h1 className="text-2xl font-semibold my-2">
-                    Thank you for choosing us to be your travel companion
-                  </h1>
-                  <p>
-                    We will notify you regarding your schedule as soon as
-                    possible
-                  </p>
-                  <p>Hope you enjoy your experience with us</p>
-                </div>
-                <div>
-                  <p className="">With regard,</p>
-                  <div className="flex items-center gap-x-2">
-                    <h3 className="text-xl font-bold">Travel</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : null}
-        </section>
+        )}
+        {/* </section> */}
       </main>
     </>
   );

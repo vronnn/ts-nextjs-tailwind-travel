@@ -2,9 +2,9 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Homepage from "./sections/page-1/Homepage";
-import Destpage from "./sections/page-2/Destpage";
-import Aboutpage from "./sections/page-3/Aboutpage";
-import Reviewpage from "./sections/page-4/Reviewpage";
+import Second from "./sections/page-5/Second";
+import Pic from "./sections/page-6/Pic";
+import Testi from "./sections/page-7/Testi";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,11 +22,13 @@ export default function Home() {
         {/* Home */}
         <Homepage />
         {/* section 2 */}
-        <Destpage />
+        <Second />
         {/* section 3 */}
-        <Aboutpage />
+        <Pic />
         {/* section 4 */}
-        <Reviewpage />
+        <Testi />
+        {/* <Reviewpage /> */}
+        <Footer />
       </div>
     </>
   );

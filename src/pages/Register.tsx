@@ -3,14 +3,10 @@ import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Link from "next/link";
 import Darkheader from "@/components/Darkheader";
-
-type FormValues = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-  remainder: boolean;
-};
+import FormValues from "@/constant/Type";
+import TextInput from "@/components/TextInput";
+import Checkbox from "@/components/Checkbox";
+import PickAuth from "@/components/PickAuth";
 
 export default function Register() {
   const {
@@ -91,80 +87,63 @@ export default function Register() {
               </div>
               <div className="flex gap-x-2">
                 <div>
-                  <input
+                  <TextInput
+                    label="First name"
+                    name="firstName"
                     type="text"
-                    {...register("firstName")}
-                    placeholder="First name"
-                    className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
+                    error={errors.firstName?.message}
+                    register={register}
                   />
-                  <p className="text-sm text-red-600 pl-2">
-                    {errors.firstName?.message}
-                  </p>
                 </div>
-
                 <div>
-                  <input
+                  <TextInput
+                    label="Last name"
+                    name="lastName"
                     type="text"
-                    {...register("lastName")}
-                    placeholder="Last name"
-                    className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
+                    error={errors.lastName?.message}
+                    register={register}
                   />
-                  <p className="text-sm text-red-600 pl-2">
-                    {errors.lastName?.message}
-                  </p>
                 </div>
               </div>
-              <input
-                type="text"
-                {...register("email")}
-                placeholder="Email"
-                className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
+              <TextInput
+                label="Email"
+                name="email"
+                type="email"
+                error={errors.email?.message}
+                register={register}
               />
-              <p className="text-sm text-red-600 pl-2">
-                {errors.email?.message}
-              </p>
-              <input
+              <TextInput
+                label="Password"
+                name="password"
                 type="password"
-                {...register("password")}
-                placeholder="Password"
-                className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
+                error={errors.password?.message}
+                register={register}
               />
-              <p className="text-sm text-red-600 pl-2">
-                {errors.password?.message}
-              </p>
-              <label
-                htmlFor="reminder"
-                className="text-slate-700 px-1 mt-2 mb-6"
-              >
-                <input
+              <div className="mb-6 mt-1">
+                <Checkbox
+                  label="remainder"
                   type="checkbox"
-                  {...register("remainder")}
-                  className="mr-2"
+                  name="remainder"
+                  register={register}
+                  info="Yes, I understand and agree to the given"
                 />
-                <span className="text-slate-600 text-sm">
-                  Yes, I understand and agree to the given{" "}
-                </span>
                 <Link
                   href=""
                   className="text-emerald-900 text-opacity-75 text-sm underline"
                 >
                   Terms of Service
                 </Link>
-              </label>
+              </div>
               <input
                 type="submit"
                 value="Create account"
                 className="rounded-lg cursor-pointer px-4 py-3 bg-emerald-900 text-slate-100 mb-2"
               />
-              <p className="text-sm text-center text-slate-500">
-                Already have an account?{" "}
-                <Link
-                  href="/Register"
-                  className="text-emerald-900 text-opacity-75 font-bold"
-                >
-                  Log in
-                </Link>
-              </p>
+              <PickAuth
+                question="Already have an account?&nbsp;"
+                pick="Log in"
+                link="/Login"
+              />
             </form>
           </div>
           {/* image */}

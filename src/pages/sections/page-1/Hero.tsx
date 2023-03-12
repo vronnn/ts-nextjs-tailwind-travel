@@ -44,9 +44,9 @@ const Hero = () => {
           <Image
             src="/arrow.png"
             alt="scroll"
-            width={5}
-            height={5}
-            className="group-hover:w-full transition-all duration-500"
+            width={10}
+            height={10}
+            className="group-hover:w-full transition-all duration-500 w-1"
           />
         </a>
       </div>

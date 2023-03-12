@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 type linkProps = {
   title?: string;
@@ -6,11 +6,30 @@ type linkProps = {
 };
 
 const Navigation = ({ title, reference }: linkProps) => {
+  const [dark, setDark] = useState(false);
+  const navbarDark = () => {
+    if (window.scrollY > 10 && window.scrollY < window.innerHeight - 60) {
+      setDark(false);
+    } else if (window.scrollY >= window.innerHeight - 60) {
+      setDark(true);
+    } else {
+      setDark(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", navbarDark);
+    return () => {
+      window.removeEventListener("scroll", navbarDark);
+    };
+  }, []);
   return (
     <li className="group">
       <a
         href={`#${reference}`}
-        className={`px-2 lg:mx-4 xl:mx-5 2xl:mx-6 group-hover:font-semibold text-slate-100`}
+        className={`px-2 lg:mx-4 xl:mx-5 2xl:mx-6 group-hover:font-semibold ${
+          dark ? "text-gray-700" : "text-gray-100"
+        }`}
       >
         {title}
       </a>

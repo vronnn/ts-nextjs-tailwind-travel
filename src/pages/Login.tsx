@@ -3,12 +3,11 @@ import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Link from "next/link";
 import Darkheader from "@/components/Darkheader";
-
-type FormValues = {
-  email: string;
-  password: string;
-  remainder: boolean;
-};
+import TextInput from "@/components/TextInput";
+import FormValues from "@/constant/Type";
+import Checkbox from "@/components/Checkbox";
+import PickAuth from "@/components/PickAuth";
+import ThirdPart from "@/components/ThirdPart";
 
 export default function Login() {
   const {
@@ -61,68 +60,47 @@ export default function Login() {
               <p className="text-slate-500 my-2">
                 Good to have you back! Please enter your details
               </p>
-              <div className="flex justify-center my-4">
-                <Link
-                  href=""
-                  className="px-4 py-2 rounded-lg shadow-lg flex gap-x-2"
-                >
-                  <Image
-                    src="/google.png"
-                    alt="img"
-                    width={24}
-                    height={24}
-                  ></Image>
-                  <p className="text-slate-600">Log in with Google</p>
-                </Link>
-              </div>
+              <ThirdPart
+                link="https://accounts.google.com/ServiceLogin?hl=en&;continue="
+                image="/google.png"
+                desc="Log in with Google"
+              />
               <div className="flex items-center gap-4">
                 <div className="border-t border-slate-300 grow"></div>
                 <p className="text-base text-slate-400 self-start">or</p>
                 <div className="border-t border-slate-300 grow"></div>
               </div>
-              <input
-                type="text"
-                {...register("email")}
-                placeholder="Email"
-                className="rounded-lg shadow-lg py-2 px-4 mt-2 mb-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
+              <TextInput
+                label="Email"
+                name="email"
+                type="email"
+                error={errors.email?.message}
+                register={register}
               />
-              <p className="pl-4 text-sm text-red-600">
-                {errors.email?.message}
-              </p>
-              <input
+              <TextInput
+                label="Password"
+                name="password"
                 type="password"
-                {...register("password")}
-                placeholder="Password"
-                className="rounded-lg shadow-lg py-2 px-4 my-1 focus:outline-none focus:ring-1 focus:ring-emerald-900"
+                error={errors.password?.message}
+                register={register}
               />
-              <p className="pl-4 text-sm text-red-600">
-                {errors.password?.message}
-              </p>
-              <label
-                htmlFor="reminder"
-                className="text-slate-700 px-1 mt-2 mb-6"
-              >
-                <input
-                  type="checkbox"
-                  {...register("remainder")}
-                  className="mr-2"
-                />
-                <span className="text-slate-600">Remember me for 30 days</span>
-              </label>
+              <Checkbox
+                label="remainder"
+                type="checkbox"
+                name="remainder"
+                register={register}
+                info="Remember me for 30 days"
+              />
               <input
                 type="submit"
                 value="Log in"
                 className="rounded-lg cursor-pointer px-4 py-3 bg-emerald-900 text-slate-100 mb-2"
               />
-              <p className="text-sm text-center text-slate-500">
-                Dont have an account?{" "}
-                <Link
-                  href="/Register"
-                  className="text-emerald-900 text-opacity-75 font-bold"
-                >
-                  Register for free
-                </Link>
-              </p>
+              <PickAuth
+                question="Dont have an account?&nbsp;"
+                pick="Register for free"
+                link="/Register"
+              />
             </form>
           </div>
           {/* image */}

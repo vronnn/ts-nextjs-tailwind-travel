@@ -3,14 +3,7 @@ import Hero from "@/pages/sections/page-1/Hero";
 import Desc from "@/pages/sections/page-1/Desc";
 
 const Content = () => {
-  return (
-    <div className="w-full h-screen">
-      {/* social, hero, scroll */}
-      <Hero />
-      {/* desc */}
-      <Desc />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Content;
