@@ -4,7 +4,7 @@ import { MdLocationOn } from "react-icons/md";
 
 const Desc = () => {
   return (
-    <div className="h-1/6 flex text-slate-100 backdrop-blur-sm">
+    <div className="min-h-[9rem] w-full absolute bottom-0 flex text-slate-100 backdrop-blur">
       {/* place */}
       <div className=" basis-1/3 flex items-center justify-center px-4 gap-x-3 xl:basis-1/4">
         <MdLocationOn size={30} />
@@ -28,8 +28,7 @@ const Desc = () => {
               <span className="hidden lg:inline">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
                 <span className="hidden 2xl:inline">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  nevite.
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
                 </span>
               </span>
             </p>
@@ -41,8 +40,7 @@ const Desc = () => {
               <span className="hidden lg:inline">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
                 <span className="hidden 2xl:inline">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  nevite.
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
                 </span>
               </span>
             </p>
@@ -54,8 +52,7 @@ const Desc = () => {
               <span className="hidden lg:inline">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
                 <span className="hidden 2xl:inline">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  nevite.
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
                 </span>
               </span>
             </p>

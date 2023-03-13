@@ -1,19 +1,40 @@
-import React from "react";
-import Navigation from "./Navigation";
-import { Navdata } from "@/constant/Data";
+import React, { useState, useEffect } from "react";
 
-const NavVer = () => {
+type linkProps = {
+  title?: string;
+  reference: string;
+};
+
+const NavHor = ({ title, reference }: linkProps) => {
+  const [dark, setDark] = useState(false);
+  const navbarDark = () => {
+    if (window.scrollY > 10 && window.scrollY < window.innerHeight - 60) {
+      setDark(false);
+    } else if (window.scrollY >= window.innerHeight - 60) {
+      setDark(true);
+    } else {
+      setDark(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", navbarDark);
+    return () => {
+      window.removeEventListener("scroll", navbarDark);
+    };
+  }, []);
   return (
-    <nav id="nav-menu" className="hidden lg:block">
-      <ul className="flex text-gray-800">
-        {Navdata.map((item) => (
-          <div key={item.reference}>
-            <Navigation title={item.title} reference={item.reference} />
-          </div>
-        ))}
-      </ul>
-    </nav>
+    <li className="group">
+      <a
+        href={`#${reference}`}
+        className={`px-3 mx-2 py-1 xl:mx-3 hover:text-opacity-80 ${
+          dark ? "text-gray-700" : "text-gray-100"
+        }`}
+      >
+        {title}
+      </a>
+    </li>
   );
 };
 
-export default NavVer;
+export default NavHor;

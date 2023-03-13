@@ -9,8 +9,8 @@ const Second = () => {
   return (
     <section id="about" className="flex flex-col justify-end 2xl:container">
       <div className="min-h-[7rem]"></div>
-      <div className="flex flex-col cont-height justify-center gap-y-28 box-border">
-        <div className="flex flex-wrap justify-center px-8 gap-y-6 gap-x-6 xl:px-0">
+      <div className="flex flex-col cont-height justify-center gap-y-28 px-10 2xl:px-4 box-border">
+        <div className="flex flex-wrap justify-center gap-y-6 gap-x-6 ">
           <div className="flex flex-col gap-y-10 lmd:w-[45%] px-6 box-border">
             <div className="flex flex-col gap-y-6">
               <h1 className="text-3xl font-bold text-gray-700 md:text-4xl lg:text-5xl lmd:max-w-lg">

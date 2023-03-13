@@ -12,7 +12,7 @@ const Homepage = () => {
       {/* header */}
       <Header />
       {/* content */}
-      <div className="w-full h-screen">
+      <div className="w-full h-screen relative">
         {/* social, hero, scroll */}
         <Hero />
         {/* desc */}

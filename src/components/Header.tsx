@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPlaneDeparture } from "react-icons/fa";
+import { RxDividerVertical } from "react-icons/rx";
 
 const Header = () => {
   const [visible, setVisible] = useState(false);
@@ -36,9 +37,13 @@ const Header = () => {
       } ${dark ? "fixed nav-color backdrop-blur shadow-md" : ""}`}
     >
       <div id="navbar" className="w-screen 2xl:container relative">
-        <div className="flex items-center justify-between relative min-h-[5.2rem]">
+        <div
+          className={`flex items-center justify-between relative ${
+            dark ? "min-h-[4.5rem]" : "min-h-[7rem]"
+          }`}
+        >
           {/* Logo */}
-          <div className="flex items-center gap-x-4 px-6 lg:px-12 lg:mr-12 order-1">
+          <div className="flex items-center gap-x-4 order-1 w-[25%] box-border pl-14 lg:pl-24 2xl:pl-16">
             <Link href="/">
               <FaPlaneDeparture
                 size={25}
@@ -57,18 +62,23 @@ const Header = () => {
           {/* navigation */}
           <Nav />
           {/* login & register */}
-          <div className="order-2 lg:order-3 lg:px-10 px-5">
+          <div className="order-2 lg:order-3 lg:w-[25%] box-border flex justify-center items-center lg:pr-24 2xl:pr-16 gap-x-2 lg:justify-end">
             <Link
               href="/Login"
-              className={`uppercase hidden xs:inline xs:text-sm sm:text-base tracking-widest border-r px-2 hover:font-bold ${
+              className={`uppercase hidden xs:inline xs:text-sm sm:text-base tracking-widest ${
                 dark ? "text-gray-700 border-gray-700" : "text-gray-100 "
               }`}
             >
               log in
             </Link>
+            <div
+              className={`h-[1.5rem] w-[1px] border-l-[1px] ${
+                dark ? "border-gray-700" : "border-gray-100"
+              }`}
+            ></div>
             <Link
               href="/Register"
-              className={`uppercase hidden xs:inline xs:text-sm sm:text-base tracking-widest px-2 hover:font-bold ${
+              className={`uppercase hidden xs:inline xs:text-sm sm:text-base tracking-widest ${
                 dark ? "text-gray-700" : "text-gray-100"
               }`}
             >

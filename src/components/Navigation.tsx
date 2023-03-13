@@ -27,7 +27,7 @@ const Navigation = ({ title, reference }: linkProps) => {
     <li className="group">
       <a
         href={`#${reference}`}
-        className={`px-2 lg:mx-4 xl:mx-5 2xl:mx-6 group-hover:font-semibold ${
+        className={`px-3 mx-2 py-1 xl:mx-3 hover:text-opacity-80 ${
           dark ? "text-gray-700" : "text-gray-100"
         }`}
       >
