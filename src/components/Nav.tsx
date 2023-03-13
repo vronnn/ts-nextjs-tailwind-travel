@@ -11,9 +11,9 @@ const Nav = () => {
   };
   const [dark, setDark] = useState(false);
   const navbarDark = () => {
-    if (window.scrollY > 10 && window.scrollY < window.innerHeight - 60) {
+    if (window.scrollY > 10 && window.scrollY < window.innerHeight - 75) {
       setDark(false);
-    } else if (window.scrollY >= window.innerHeight - 60) {
+    } else if (window.scrollY >= window.innerHeight - 75) {
       setDark(true);
     } else {
       setDark(false);
@@ -28,7 +28,7 @@ const Nav = () => {
   }, []);
   return (
     <div className="order-3 lg:px-0 lg:order-2 w-1/4 lg:w-fit">
-      <div className=" flex justify-end pr-14 w-full">
+      <div className=" flex justify-end pr-6 lmd:pr-14 w-full">
         <button className="lg:hidden rounded-full" onClick={handleClick}>
           <HiOutlineMenu color={dark ? "#334155" : "#f3f4f6"} size={30} />
         </button>

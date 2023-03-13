@@ -9,7 +9,7 @@ const Second = () => {
   return (
     <section id="about" className="flex flex-col justify-end 2xl:container">
       <div className="min-h-[7rem]"></div>
-      <div className="flex flex-col cont-height justify-center gap-y-28 px-10 2xl:px-4 box-border">
+      <div className="flex flex-col cont-height justify-center gap-y-28 lmd:px-10 2xl:px-4 box-border">
         <div className="flex flex-wrap justify-center gap-y-6 gap-x-6 ">
           <div className="flex flex-col gap-y-10 lmd:w-[45%] px-6 box-border">
             <div className="flex flex-col gap-y-6">

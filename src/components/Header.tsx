@@ -9,10 +9,10 @@ const Header = () => {
   const [visible, setVisible] = useState(false);
   const [dark, setDark] = useState(false);
   const navbarVisible = () => {
-    if (window.scrollY > 10 && window.scrollY < window.innerHeight - 60) {
+    if (window.scrollY > 10 && window.scrollY < window.innerHeight - 75) {
       setVisible(true);
       setDark(false);
-    } else if (window.scrollY >= window.innerHeight - 60) {
+    } else if (window.scrollY >= window.innerHeight - 75) {
       setDark(true);
       setVisible(false);
     } else {
@@ -43,7 +43,7 @@ const Header = () => {
           }`}
         >
           {/* Logo */}
-          <div className="flex items-center gap-x-4 order-1 w-[25%] box-border pl-14 lg:pl-24 2xl:pl-16">
+          <div className="flex items-center gap-x-4 order-1 w-[25%] box-border pl-6 lmd:pl-14 lg:pl-24 2xl:pl-16">
             <Link href="/">
               <FaPlaneDeparture
                 size={25}

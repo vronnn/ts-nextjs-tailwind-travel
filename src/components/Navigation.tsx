@@ -8,9 +8,9 @@ type linkProps = {
 const Navigation = ({ title, reference }: linkProps) => {
   const [dark, setDark] = useState(false);
   const navbarDark = () => {
-    if (window.scrollY > 10 && window.scrollY < window.innerHeight - 60) {
+    if (window.scrollY > 10 && window.scrollY < window.innerHeight - 75) {
       setDark(false);
-    } else if (window.scrollY >= window.innerHeight - 60) {
+    } else if (window.scrollY >= window.innerHeight - 75) {
       setDark(true);
     } else {
       setDark(false);
