@@ -9,10 +9,10 @@ const Header = () => {
   const [visible, setVisible] = useState(false);
   const [dark, setDark] = useState(false);
   const navbarVisible = () => {
-    if (window.scrollY > 10 && window.scrollY < window.innerHeight - 75) {
+    if (window.scrollY > 10 && window.scrollY < window.innerHeight - 80) {
       setVisible(true);
       setDark(false);
-    } else if (window.scrollY >= window.innerHeight - 75) {
+    } else if (window.scrollY >= window.innerHeight - 80) {
       setDark(true);
       setVisible(false);
     } else {

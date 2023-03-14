@@ -7,9 +7,9 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="flex flex-row justify-between items-center h-[90%] 2xl:container">
+    <div className="flex flex-row justify-between items-center h-[90%]">
       {/* social */}
-      <div className="hidden xs:flex xs:flex-col xs:px-5 lg:px-8 2xl:px-1">
+      <div className="hidden xs:flex xs:flex-col xs:px-5 lg:px-8">
         <a href="https://github.com/" className="w-5 py-2">
           <FaGithub color="#f1f5f9" size={22} />
         </a>
@@ -35,7 +35,7 @@ const Hero = () => {
         </div>
       </div>
       {/* scroll */}
-      <div className="hidden xs:flex flex-col items-center px-5 group lg:px-8 2xl:px-1">
+      <div className="hidden xs:flex flex-col items-center px-5 group lg:px-8">
         <div className="w-[22px] h-[22px] rounded-full bg-slate-100 mb-3 group-hover:animate-bounce"></div>
         <a
           href="#about"
