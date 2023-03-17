@@ -1,10 +1,10 @@
 import Head from "next/head";
 // import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import Homepage from "./sections/home/Homepage";
-import Second from "./sections/about/Second";
-import Pic from "./sections/destinations/Pic";
-import Testi from "./sections/review/Testi";
+import Homepage from "./sections/landing/Homepage";
+import Second from "./sections/landing/Second";
+import Pic from "./sections/landing/Pic";
+import Testi from "./sections/landing/Testi";
 import Footer from "@/components/Footer";
 
 // const inter = Inter({ subsets: ["latin"] });

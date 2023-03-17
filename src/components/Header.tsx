@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
-import Image from "next/image";
 import Link from "next/link";
 import { FaPlaneDeparture } from "react-icons/fa";
-import { RxDividerVertical } from "react-icons/rx";
 
 const Header = () => {
   const [visible, setVisible] = useState(false);
@@ -39,7 +37,7 @@ const Header = () => {
       <div id="navbar" className="w-screen 2xl:container relative">
         <div
           className={`flex items-center justify-between relative ${
-            dark ? "min-h-[4.5rem]" : "min-h-[7rem]"
+            dark ? "min-h-[4.5rem]" : " min-h-[5rem] md:min-h-[7rem]"
           }`}
         >
           {/* Logo */}
@@ -72,7 +70,7 @@ const Header = () => {
               log in
             </Link>
             <div
-              className={`h-[1.5rem] w-[1px] border-l-[1px] ${
+              className={` h-4 sm:h-[1.5rem] w-[1px] border-l-[1px] ${
                 dark ? "border-gray-700" : "border-gray-100"
               }`}
             ></div>
