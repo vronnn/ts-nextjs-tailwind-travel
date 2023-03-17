@@ -65,7 +65,7 @@ const Second = () => {
             <div className="flex items-start gap-x-3">
               <MdOutlineTravelExplore size={30} />
               <div>
-                <h3 className="text-[2rem] leading-8 font-bold text-gray-700 lmd:text-4xl">
+                <h3 className="text-3xl sm:text-[2rem] leading-8 font-bold text-gray-700 lmd:text-4xl">
                   1.4B
                 </h3>
                 <p>travellers/month</p>
@@ -74,7 +74,7 @@ const Second = () => {
             <div className="flex items-start gap-x-3">
               <SlPeople size={30} />
               <div>
-                <h3 className="text-[2rem] leading-8 font-bold text-gray-700 lmd:text-4xl">
+                <h3 className="text-3xl sm:text-[2rem] leading-8 font-bold text-gray-700 lmd:text-4xl">
                   4.9M
                 </h3>
                 <p>honest reviews</p>
@@ -83,7 +83,7 @@ const Second = () => {
             <div className="flex items-start gap-x-3">
               <IoMdPhotos size={30} />
               <div>
-                <h3 className="text-[2rem] leading-8 font-bold text-gray-700 lmd:text-4xl">
+                <h3 className="text-3xl sm:text-[2rem] leading-8 font-bold text-gray-700 lmd:text-4xl">
                   329.6k
                 </h3>
                 <p>photos</p>
