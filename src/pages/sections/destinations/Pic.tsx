@@ -24,7 +24,11 @@ const Pic = () => {
     }
   };
   return (
-    <section id="destinations" className="flex flex-col py-8">
+    <section
+      id="destinations"
+      data-testid="destinations"
+      className="flex flex-col py-8"
+    >
       <div className="min-h-[7.5rem]"></div>
       <div className="relative">
         <div

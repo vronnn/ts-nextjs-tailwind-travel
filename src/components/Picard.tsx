@@ -16,7 +16,7 @@ const Picard = ({ src, title, desc }: cardProps) => {
       <div className="group rounded-md overflow-hidden relative shadow-lg">
         <Image
           src={src}
-          alt=""
+          alt={`${title} picture`}
           width={808}
           height={632}
           className="group-hover:scale-110 group-hover:brightness-75 brig transition-all duration-300"

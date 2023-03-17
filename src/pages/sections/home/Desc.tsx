@@ -9,9 +9,9 @@ const Desc = () => {
         {/* place */}
         <div className=" basis-1/3 flex items-center justify-center px-4 gap-x-3 xl:basis-1/4">
           <MdLocationOn size={30} />
-          <h1 className="xs:text-xl sm:text-2xl lg:text-[1.7rem] font-bold">
+          <h2 className="xs:text-xl sm:text-2xl lg:text-[1.7rem] font-bold">
             Sri Lanka
-          </h1>
+          </h2>
         </div>
         {/* advertisment */}
         <div className=" basis-2/3 flex xl:basis-3/4">

@@ -58,7 +58,7 @@ const Details = ({
           <div className="">
             <Image
               src={src}
-              alt="img"
+              alt={alt}
               width={920}
               height={20}
               className="max-w-[40rem] max-h-[35rem] object-cover"

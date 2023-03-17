@@ -5,7 +5,11 @@ import myImage from "@/../public/21.jpg";
 
 const Testi = () => {
   return (
-    <section id="review" className="flex flex-col xl:container">
+    <section
+      id="review"
+      data-testid="review"
+      className="flex flex-col xl:container"
+    >
       <div className="min-h-[8rem]"></div>
       <div className="flex flex-wrap justify-center px-8 gap-y-10 min-h-[80vh] md:min-h-[50vh] gap-x-6">
         <div className="flex flex-col justify-center items-center gap-y-6 lmd:w-[47%] lmd:order-2">

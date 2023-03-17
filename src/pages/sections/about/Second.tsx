@@ -7,15 +7,19 @@ import { IoMdPhotos } from "react-icons/io";
 
 const Second = () => {
   return (
-    <section id="about" className="flex flex-col justify-end 2xl:container">
+    <section
+      id="about"
+      data-testid="about"
+      className="flex flex-col justify-end 2xl:container"
+    >
       <div className="min-h-[7rem]"></div>
       <div className="flex flex-col cont-height justify-center gap-y-28 lmd:px-10 2xl:px-4 box-border">
         <div className="flex flex-wrap justify-center gap-y-6 gap-x-6 ">
           <div className="flex flex-col gap-y-10 lmd:w-[45%] px-6 box-border">
             <div className="flex flex-col gap-y-6">
-              <h1 className="text-3xl font-bold text-gray-700 md:text-4xl lg:text-5xl lmd:max-w-lg">
+              <h2 className="text-3xl font-bold text-gray-700 md:text-4xl lg:text-5xl lmd:max-w-lg">
                 The most populer travel agency in the world
-              </h1>
+              </h2>
               <p className="lg:text-lg">
                 Welcome to the Official Travel website. Build with the finest
                 services for our customers and become the biggest travel agency

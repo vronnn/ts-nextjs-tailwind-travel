@@ -7,6 +7,7 @@ const Homepage = () => {
   return (
     <main
       id="home"
+      data-testid="homepage"
       className={`min-h-screen bg-[url('/forest-dark.jpg')] bg-cover bg-no-repeat`}
     >
       {/* header */}
