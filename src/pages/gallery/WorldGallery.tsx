@@ -24,7 +24,8 @@ const Home: NextPage = () => {
         <div className="flex flex-col gap-y-4">
           <h1 className="text-4xl font-bold text-gray-200">Travel</h1>
           <p className="text-gray-200 max-w-sm">
-            The world's biggest travel community in 2022 Powered by vron company
+            The world&apos;s biggest travel community in 2022 Powered by vron
+            company
           </p>
           <form onSubmit={handleSubmit}>
             <label

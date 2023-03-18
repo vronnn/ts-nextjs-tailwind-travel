@@ -34,13 +34,8 @@ export default function World({ query }: Props) {
 
   return (
     <section className="">
-      <div className="min-h-[3rem]">
-        <div>
-          <p></p>
-        </div>
-        <div></div>
-      </div>
-      <div className="flex flex-wrap justify-center gap-8 box-border pt-10">
+      <div className="min-h-[3rem]"></div>
+      <div className="flex flex-wrap justify-center gap-8 box-border">
         {photos.map((photo) => (
           <div key={photo.id} className="w-[28%]">
             <Link href={`/gallery/${photo.id}`}>
