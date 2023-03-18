@@ -30,13 +30,13 @@ const Second = () => {
             <div className="flex gap-x-4">
               <Link
                 href="/gallery/WorldGallery"
-                className="px-4 py-[0.6rem] lmd:py-3 lmd:px-6 shadow bg-gray-700 text-gray-100"
+                className="px-4 py-[0.6rem] lmd:py-3 lmd:px-6 bg-gray-700 text-gray-100 hover:bg-gray-800 transition-all duration-300"
               >
                 Discover more places
               </Link>
               <Link
                 href=""
-                className="px-4 py-[0.6rem] lmd:py-3 lmd:px-6 shadow"
+                className="px-4 py-[0.6rem] lmd:py-3 lmd:px-6 border-[1px] border-gray-400 hover:border-gray-800 border-opacity-40 hover:border-opacity-100 transition-all duration-200"
               >
                 View our packages
               </Link>

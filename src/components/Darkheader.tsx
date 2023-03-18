@@ -5,14 +5,9 @@ import Link from "next/link";
 import { FaPlaneDeparture } from "react-icons/fa";
 
 const Darkheader = () => {
-  const handleUIEvent = (e: UIEvent<HTMLDivElement>) => {};
   return (
     <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
-      <div
-        id="navbar"
-        onScroll={handleUIEvent}
-        className="w-screen 2xl:container relative"
-      >
+      <div id="navbar" className="w-screen 2xl:container relative">
         <div className="flex items-center justify-between relative min-h-[5.2rem]">
           {/* Logo */}
           <div className="flex items-center gap-x-4 px-6 lg:px-12 lg:mr-12 order-1">

@@ -34,19 +34,13 @@ export default function World({ query }: Props) {
 
   return (
     <section className="">
-      <div className="flex justify-center items-center min-h-[5rem] pt-10 box-border">
-        <h1 className="text-center text-5xl font-semibold text-gray-700">
-          {query}
-        </h1>
+      <div className="min-h-[3rem]">
+        <div>
+          <p></p>
+        </div>
+        <div></div>
       </div>
-      <div className="flex justify-center items-center min-h-[6rem] gap-x-1">
-        <button className="px-4 py-2 bg-gray-700 text-gray-100 rounded-md mr-4">
-          Photos
-        </button>
-        <button className="px-4 py-2">Videos</button>
-        <button className="px-4 py-2">Leaderboard</button>
-      </div>
-      <div className="flex flex-wrap justify-center gap-8 box-border">
+      <div className="flex flex-wrap justify-center gap-8 box-border pt-10">
         {photos.map((photo) => (
           <div key={photo.id} className="w-[28%]">
             <Link href={`/gallery/${photo.id}`}>
