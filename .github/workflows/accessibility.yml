@@ -1,4 +1,4 @@
-⁠ name: Accessibility Check
+name: Accessibility Check
 
 on:
   workflow_dispatch:
@@ -23,4 +23,4 @@ jobs:
     with:
       url: ""
       port: 3000
-    secrets: inherit ⁠
+    secrets: inherit
