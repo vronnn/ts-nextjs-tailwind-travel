@@ -1,0 +1,26 @@
+⁠ name: Accessibility Check
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: ["**"]
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  accessibility:
+    uses: Access-Time/LensCore/.github/workflows/lens-core-template.yml@feat/create-github-ci-template-for-lenscore-accessibility-testing
+    with:
+      url: ""
+      port: 3000
+    secrets: inherit ⁠
